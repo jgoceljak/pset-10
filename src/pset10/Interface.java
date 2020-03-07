@@ -12,6 +12,9 @@ import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.ButtonGroup;
+
+import com.google.gson.Gson;
+
 public class Interface {
 
 	private JFrame frmDictionary;
@@ -57,11 +60,11 @@ public class Interface {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(2, 11, 89, 23);
+		btnNewButton.setBounds(12, 25, 89, 23);
 		frmDictionary.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Remove");
-		btnNewButton_1.setBounds(101, 11, 89, 23);
+		btnNewButton_1.setBounds(101, 25, 89, 23);
 		frmDictionary.getContentPane().add(btnNewButton_1);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -76,18 +79,18 @@ public class Interface {
 		
 		txtSearch = new JTextField();
 		txtSearch.setToolTipText("");
-		txtSearch.setBounds(12, 45, 179, 20);
+		txtSearch.setBounds(12, 53, 179, 20);
 		frmDictionary.getContentPane().add(txtSearch);
 		txtSearch.setColumns(10);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Asc");
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Ascending");
 		buttonGroup.add(rdbtnNewRadioButton);
-		rdbtnNewRadioButton.setBounds(36, 78, 59, 23);
+		rdbtnNewRadioButton.setBounds(22, 80, 90, 23);
 		frmDictionary.getContentPane().add(rdbtnNewRadioButton);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Desc");
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Descending");
 		buttonGroup.add(rdbtnNewRadioButton_1);
-		rdbtnNewRadioButton_1.setBounds(110, 78, 59, 23);
+		rdbtnNewRadioButton_1.setBounds(110, 80, 80, 23);
 		frmDictionary.getContentPane().add(rdbtnNewRadioButton_1);
 		
 		JScrollPane scrollPane_2 = new JScrollPane();
