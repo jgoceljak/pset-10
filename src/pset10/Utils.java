@@ -34,7 +34,6 @@ public class Utils {
             return classpathDirectory;
         }
     }
-
     	public static DefaultListModel<String> sortWordsAscending(DefaultListModel<String> wordList) {
     		String temp;
     		int n = wordList.getSize();
@@ -52,5 +51,16 @@ public class Utils {
             }
     		return wordList;
     	}
+
+		public static ListModel<String> reverseOrder(DefaultListModel<String> words) {
+			DefaultListModel<String> b = new DefaultListModel<String>(); 
+			int n = words.getSize();
+	        int j = n; 
+	        for (int i = 0; i < n; i++) { 
+	            b.addElement(words.get(j-1)); 
+	            j = j - 1; 
+	        } 
+	        return b;
+		}
 
 }

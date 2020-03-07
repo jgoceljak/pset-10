@@ -1,3 +1,5 @@
+package pset10;
+
 public class Words {
 	    private String word;
 	    private Definitions[] definitions;
