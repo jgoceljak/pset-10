@@ -5,6 +5,8 @@ import java.awt.ScrollPane;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
@@ -14,7 +16,7 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 
-import com.google.gson.Gson;.
+import com.google.gson.Gson;
 
 public class Interface {
 
