@@ -1,116 +1,127 @@
-package pset10;
-
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JList;
-
-import java.awt.ScrollPane;
-import java.awt.BorderLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.awt.event.ActionEvent;
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.JTextField;
-import javax.swing.JRadioButton;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.ButtonGroup;
-import javax.swing.DefaultListModel;
-
-import com.google.gson.Gson;
 
 public class Interface {
 
-	private JFrame frmDictionary;
+	private JFrame frmInterface;
 	private JTextField txtSearch;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
 	 * Launch the application.
+	 * @throws FileNotFoundException 
 	 */
-	public static void main(String[] args) {
-		try {
-			getWords();
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+	public static void main(String[] args) throws FileNotFoundException {
+		getWords();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					Interface window = new Interface();
-					window.frmDictionary.setVisible(true);
+					window.frmInterface.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-	
+
 	private static DefaultListModel<String> getWords() throws FileNotFoundException{
 		Gson gson = new Gson();
         String classpathDirectory = Utils.getClasspathDir();
         BufferedReader br = new BufferedReader(new FileReader(classpathDirectory + "words.json"));
         Words[] words = gson.fromJson(br, Words[].class);
-        DefaultListModel<String> wordList = new DefaultListModel<String>();
+        DefaultListModel<String> listOfWords = new DefaultListModel<String>();
         for (Words word : words) {
-        	wordList.addElement(word.getWord());
+        	listOfWords.addElement(word.getWord());
         }
        ;
-        return  Utils.sortWordsAscending(wordList);
+        return  Utils.sortWordsAscending(listOfWords);
 	}
 
 	/**
 	 * Create the application.
+	 * @throws FileNotFoundException 
 	 */
-	public Interface() {
+	public Interface() throws FileNotFoundException {
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
+	 * @throws FileNotFoundException 
 	 */
-	private void initialize() {
-		frmDictionary = new JFrame();
-		frmDictionary.setResizable(false);
-		frmDictionary.setTitle("Dictionary");
-		frmDictionary.setBounds(100, 100, 800, 600);
-		frmDictionary.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmDictionary.getContentPane().setLayout(null);
+	private void initialize() throws FileNotFoundException {
+		frmInterface = new JFrame();
+		frmInterface.setResizable(false);
+		frmInterface.setTitle("Interface");
+		frmInterface.setBounds(100, 100, 800, 600);
+		frmInterface.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmInterface.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Add");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.out.println("add");
 			}
 		});
-		btnNewButton.setBounds(12, 25, 89, 23);
-		frmDictionary.getContentPane().add(btnNewButton);
+		btnNewButton.setBounds(2, 11, 89, 23);
+		frmInterface.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Remove");
-		btnNewButton_1.setBounds(101, 25, 89, 23);
-		frmDictionary.getContentPane().add(btnNewButton_1);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println("Remove");
+			}
+		});
+		btnNewButton_1.setBounds(101, 11, 89, 23);
+		frmInterface.getContentPane().add(btnNewButton_1);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(490, 332, -57, -98);
-		frmDictionary.getContentPane().add(scrollPane);
-		
-		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollPane_1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		scrollPane_1.setBounds(22, 110, 168, 450);
-		frmDictionary.getContentPane().add(scrollPane_1);
+		frmInterface.getContentPane().add(scrollPane);
 		
 		txtSearch = new JTextField();
+		txtSearch.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+				System.out.println(txtSearch.getText());
+			}
+		});
 		txtSearch.setToolTipText("");
-		txtSearch.setBounds(12, 53, 179, 20);
-		frmDictionary.getContentPane().add(txtSearch);
+		txtSearch.setBounds(12, 45, 179, 20);
+		frmInterface.getContentPane().add(txtSearch);
 		txtSearch.setColumns(10);
+		
+		JScrollPane scrollPane_2 = new JScrollPane();
+		scrollPane_2.setBounds(207, 11, 566, 549);
+		frmInterface.getContentPane().add(scrollPane_2);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(12, 114, 179, 446);
+		frmInterface.getContentPane().add(scrollPane_1);
 		
 		JList<String> list = new JList<String>();
 		list.addListSelectionListener(new ListSelectionListener() {
@@ -123,22 +134,44 @@ public class Interface {
 		DefaultListModel<String> DLM =  getWords();
 		
 		list.setModel(DLM);
-
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Ascending");
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Asc");
 		buttonGroup.add(rdbtnNewRadioButton);
-		rdbtnNewRadioButton.setBounds(22, 80, 90, 23);
-		frmDictionary.getContentPane().add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.setBounds(36, 78, 59, 23);
+		frmInterface.getContentPane().add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.setSelected(true);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Descending");
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Desc");
 		buttonGroup.add(rdbtnNewRadioButton_1);
-		rdbtnNewRadioButton_1.setBounds(110, 80, 80, 23);
-		frmDictionary.getContentPane().add(rdbtnNewRadioButton_1);
+		rdbtnNewRadioButton_1.setBounds(110, 78, 59, 23);
+		frmInterface.getContentPane().add(rdbtnNewRadioButton_1);
 		
+		rdbtnNewRadioButton_1.addItemListener(new ItemListener() {
 
-		
-		JScrollPane scrollPane_2 = new JScrollPane();
-		scrollPane_2.setBounds(207, 11, 566, 549);
-		frmDictionary.getContentPane().add(scrollPane_2);
+		    @Override
+		    public void itemStateChanged(ItemEvent event) {
+		    	
+		        int state = event.getStateChange();
+		        if (state == ItemEvent.SELECTED) {		        	
+		            System.out.println("desc");
+		            try {
+						list.setModel(Utils.reverseOrder(getWords()));
+					} catch (FileNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		            
+		        } else if (state == ItemEvent.DESELECTED) {
+		        	System.out.println("asc");
+		        	try {
+						list.setModel(getWords());
+					} catch (FileNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}		 
+		        }
+		    }
+
+		});
 	}
 }
