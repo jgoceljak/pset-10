@@ -3,6 +3,8 @@ package pset10;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JList;
+
 import java.awt.ScrollPane;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
@@ -13,6 +15,8 @@ import java.io.FileReader;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
@@ -31,6 +35,12 @@ public class Interface {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		try {
+			getWords();
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -48,12 +58,12 @@ public class Interface {
         String classpathDirectory = Utils.getClasspathDir();
         BufferedReader br = new BufferedReader(new FileReader(classpathDirectory + "words.json"));
         Words[] words = gson.fromJson(br, Words[].class);
-        DefaultListModel<String> listOfWords = new DefaultListModel<String>();
+        DefaultListModel<String> wordList = new DefaultListModel<String>();
         for (Words word : words) {
-        	listOfWords.addElement(word.getWord());
+        	wordList.addElement(word.getWord());
         }
        ;
-        return  Utils.sortWordsAsc(listOfWords);
+        return  Utils.sortWordsAscending(wordList);
 	}
 
 	/**
@@ -102,6 +112,19 @@ public class Interface {
 		frmDictionary.getContentPane().add(txtSearch);
 		txtSearch.setColumns(10);
 		
+		JList<String> list = new JList<String>();
+		list.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent arg0) {
+				System.out.println(list.getSelectedValue());
+			}
+		});
+		scrollPane_1.setViewportView(list);
+		
+		DefaultListModel<String> DLM =  getWords();
+		
+		list.setModel(DLM);
+
+		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Ascending");
 		buttonGroup.add(rdbtnNewRadioButton);
 		rdbtnNewRadioButton.setBounds(22, 80, 90, 23);
@@ -111,6 +134,8 @@ public class Interface {
 		buttonGroup.add(rdbtnNewRadioButton_1);
 		rdbtnNewRadioButton_1.setBounds(110, 80, 80, 23);
 		frmDictionary.getContentPane().add(rdbtnNewRadioButton_1);
+		
+
 		
 		JScrollPane scrollPane_2 = new JScrollPane();
 		scrollPane_2.setBounds(207, 11, 566, 549);

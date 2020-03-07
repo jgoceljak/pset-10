@@ -33,6 +33,24 @@ public class Utils {
             }
             return classpathDirectory;
         }
-    }  
+    }
+
+    	public static DefaultListModel<String> sortWordsAscending(DefaultListModel<String> wordList) {
+    		String temp;
+    		int n = wordList.getSize();
+    		for (int i = 0; i < n; i++) 
+            {
+                for (int j = i + 1; j < n; j++) 
+                {
+                    if ((wordList.get(i).compareTo(wordList.get(j)) > 0)) 
+                    {
+                        temp = wordList.get(i);
+                        wordList.set(i, wordList.get(j));
+                        wordList.set(j, temp);
+                    }
+                }
+            }
+    		return wordList;
+    	}
 
 }
