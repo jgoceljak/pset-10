@@ -12,8 +12,9 @@ import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultListModel;
 
-import com.google.gson.Gson;
+import com.google.gson.Gson;.
 
 public class Interface {
 
@@ -35,6 +36,19 @@ public class Interface {
 				}
 			}
 		});
+	}
+	
+	private static DefaultListModel<String> getWords() throws FileNotFoundException{
+		Gson gson = new Gson();
+        String classpathDirectory = Utils.getClasspathDir();
+        BufferedReader br = new BufferedReader(new FileReader(classpathDirectory + "words.json"));
+        Words[] words = gson.fromJson(br, Words[].class);
+        DefaultListModel<String> listOfWords = new DefaultListModel<String>();
+        for (Words word : words) {
+        	listOfWords.addElement(word.getWord());
+        }
+       ;
+        return  Utils.sortWordsAsc(listOfWords);
 	}
 
 	/**
