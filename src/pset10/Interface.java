@@ -1,3 +1,5 @@
+package pset10;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -7,6 +9,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
