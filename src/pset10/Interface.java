@@ -190,20 +190,16 @@ public class Interface {
 		    	
 		        int state = event.getStateChange();
 		        if (state == ItemEvent.SELECTED) {		        	
-		            System.out.println("desc");
 		            try {
 						list.setModel(Utils.reverseOrder(getWords()));
 					} catch (FileNotFoundException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 		            
 		        } else if (state == ItemEvent.DESELECTED) {
-		        	System.out.println("asc");
 		        	try {
 						list.setModel(getWords());
 					} catch (FileNotFoundException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}		 
 		        }
@@ -222,18 +218,23 @@ public class Interface {
 				    try {
 				    	words = Utils.reverseOrder(getWords());
 					} catch (FileNotFoundException e2) {
-						// TODO Auto-generated catch block
 						e2.printStackTrace();
-					}
-				    
+					}		    
 				} else {
 					try {
 						words = getWords();
 					} catch (FileNotFoundException e1) {
-						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}	
 		}
+				DefaultListModel<String> filtered = new DefaultListModel<String>();
+				for(int i = 0 ; i < words.size(); i++) {
+					if((words.get(i).contains(input))) {
+						System.out.println(words.get(i));
+						filtered.addElement(words.get(i));							
+					}
+				}
+				list.setModel(filtered);
 		}
 			});
 		txtSearch.setToolTipText("");
