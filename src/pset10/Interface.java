@@ -143,6 +143,7 @@ public class Interface {
 			public void keyReleased(KeyEvent e) {
 				String input = txtSearch.getText().toLowerCase();
 				System.out.println(input);
+				DefaultListModel<String> words = new DefaultListModel<String>();
 		}
 		});
 		txtSearch.setToolTipText("");
