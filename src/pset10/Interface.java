@@ -31,6 +31,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.awt.Color;
 
 public class Interface {
 
@@ -116,6 +117,8 @@ public class Interface {
 		
 		
 		JButton btnNewButton = new JButton("Add");
+		btnNewButton.setBackground(new Color(107, 142, 35));
+		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("add");
@@ -125,6 +128,8 @@ public class Interface {
 		frmInterface.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Remove");
+		btnNewButton_1.setForeground(Color.BLACK);
+		btnNewButton_1.setBackground(new Color(220, 20, 60));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Remove");
@@ -172,15 +177,15 @@ public class Interface {
 		
 		list.setModel(DLM);
 		
-		JRadioButton ascendingButton = new JRadioButton("Asc");
+		JRadioButton ascendingButton = new JRadioButton("Ascending");
 		buttonGroup.add(ascendingButton);
-		ascendingButton.setBounds(36, 78, 59, 23);
+		ascendingButton.setBounds(12, 78, 79, 23);
 		frmInterface.getContentPane().add(ascendingButton);
 		ascendingButton.setSelected(true);
 		
-		JRadioButton descendingButton = new JRadioButton("Desc");
+		JRadioButton descendingButton = new JRadioButton("Descending");
 		buttonGroup.add(descendingButton);
-		descendingButton.setBounds(110, 78, 59, 23);
+		descendingButton.setBounds(101, 78, 89, 23);
 		frmInterface.getContentPane().add(descendingButton);
 		
 		descendingButton.addItemListener(new ItemListener() {
