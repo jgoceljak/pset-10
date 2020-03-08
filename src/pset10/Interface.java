@@ -19,12 +19,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import javax.swing.event.ListSelectionListener;
+import javax.swing.text.Style;
 import javax.swing.event.ListSelectionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class Interface {
 
@@ -48,6 +50,18 @@ public class Interface {
 				}
 			}
 		});
+	}
+	private static ArrayList<Words> getWordList() throws FileNotFoundException{
+		Gson gson = new Gson();
+        String classpathDirectory = Utils.getClasspathDir();
+        BufferedReader br = new BufferedReader(new FileReader(classpathDirectory + "words.json"));
+        Words[] words = gson.fromJson(br, Words[].class);
+        ArrayList<Words> listOfWords = new ArrayList<Words>();
+        for (Words word : words) {
+        	listOfWords.add(word);
+        }
+       ;
+        return listOfWords;
 	}
 
 	private static DefaultListModel<String> getWords() throws FileNotFoundException{
@@ -130,8 +144,21 @@ public class Interface {
 			public void valueChanged(ListSelectionEvent arg0) {
 				String selectedWord = list.getSelectedValue();
 				System.out.println(selectedWord);
+				ArrayList<Words> Words = getWordList();
+				for(Words word: Words) {
+					if(word.getWord().equals(selectedWord)) {
+						doc.remove(0, doc.getLength());
+						Style bigWord = textPane.addStyle();
+						Definitions[] definitions = word.getDefinitions();
+						int definitionCounter = 1;
+						for (Definitions definition : definitions) {
+							doc.insertString(doc.getLength(), definitionCounter + "." + selectedWord +" (" + definition.getPartOfSpeech() +")\n\n    "  +  definition.getDefinition() + "\n\n", null);
+							definitionCounter++;
 			}
-		});
+		}
+				} 
+				} 
+			});
 		scrollPane_1.setViewportView(list);
 		
 		DefaultListModel<String> DLM =  getWords();
