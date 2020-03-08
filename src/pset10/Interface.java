@@ -10,6 +10,7 @@ import java.awt.event.ItemListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
@@ -19,7 +20,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import javax.swing.event.ListSelectionListener;
+import javax.swing.text.DefaultCaret;
 import javax.swing.text.Style;
+import javax.swing.text.StyledDocument;
 import javax.swing.event.ListSelectionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -97,6 +100,20 @@ public class Interface {
 		frmInterface.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmInterface.getContentPane().setLayout(null);
 		
+		JScrollPane scrollPane_2 = new JScrollPane();
+		scrollPane_2.setBounds(207, 11, 566, 549);
+		frmInterface.getContentPane().add(scrollPane_2);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setText("1. Example (pos)");
+		textPane.setEditable(false);
+		scrollPane_2.setViewportView(textPane);
+		StyledDocument doc = textPane.getStyledDocument();
+		DefaultCaret caret = (DefaultCaret) textPane.getCaret();
+		caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
+		
+		
+		
 		JButton btnNewButton = new JButton("Add");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -130,10 +147,6 @@ public class Interface {
 		txtSearch.setBounds(12, 45, 179, 20);
 		frmInterface.getContentPane().add(txtSearch);
 		txtSearch.setColumns(10);
-		
-		JScrollPane scrollPane_2 = new JScrollPane();
-		scrollPane_2.setBounds(207, 11, 566, 549);
-		frmInterface.getContentPane().add(scrollPane_2);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setBounds(12, 114, 179, 446);
