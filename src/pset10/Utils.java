@@ -54,11 +54,11 @@ public class Utils {
 
 		public static ListModel<String> reverseOrder(DefaultListModel<String> words) {
 			DefaultListModel<String> b = new DefaultListModel<String>(); 
-			int n = words.getSize();
-	        int j = n; 
-	        for (int i = 0; i < n; i++) { 
-	            b.addElement(words.get(j-1)); 
-	            j = j - 1; 
+			int j = words.getSize();
+	        int k = j; 
+	        for (int i = 0; i < j; i++) { 
+	            b.addElement(words.get(k-1)); 
+	            k = k - 1; 
 	        } 
 	        return b;
 		}

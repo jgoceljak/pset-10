@@ -141,8 +141,9 @@ public class Interface {
 		txtSearch.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
-				System.out.println(txtSearch.getText());
-			}
+				String input = txtSearch.getText().toLowerCase();
+				System.out.println(input);
+		}
 		});
 		txtSearch.setToolTipText("");
 		txtSearch.setBounds(12, 45, 179, 20);
