@@ -23,6 +23,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultCaret;
 import javax.swing.text.Style;
+import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import javax.swing.event.ListSelectionEvent;
 import java.awt.event.KeyAdapter;
@@ -157,12 +158,23 @@ public class Interface {
 						for(Words word: Words) {
 							if(word.getWord().equals(selected)) {
 								rightWindow.remove(0, rightWindow.getLength());
+								Style bigWord = textPane.addStyle("Style", null);
+								Style header = textPane.addStyle("Style", null);
+								StyleConstants.setFontSize(header, 20);
+//								StyleConstants.setBold(header, true);
+								StyleConstants.setFontSize(bigWord, 36);
+								StyleConstants.setBold(bigWord, true);
+								rightWindow.insertString(rightWindow.getLength(),selected.substring(0, 1).toUpperCase() + selected.substring(1) + "\n" ,bigWord );
+								rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+								rightWindow.insertString(rightWindow.getLength(),"Definitions\n" ,header );
+								rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
 								Definitions[] definitions = word.getDefinitions();
 								int definitionCounter = 1;
 								for (Definitions definition : definitions) {
 									rightWindow.insertString(rightWindow.getLength(), definitionCounter + "." + selected +" (" + definition.getPartOfSpeech() +")\n\n    "  +  definition.getDefinition() + "\n\n", null);
 									definitionCounter++;
 								}
+								
 								
 							}
 						}
