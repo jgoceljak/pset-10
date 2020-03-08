@@ -109,7 +109,7 @@ public class Interface {
 		textPane.setText("1. Example (pos)");
 		textPane.setEditable(false);
 		scrollPane_2.setViewportView(textPane);
-		StyledDocument doc = textPane.getStyledDocument();
+		StyledDocument rightWindow = textPane.getStyledDocument();
 		DefaultCaret caret = (DefaultCaret) textPane.getCaret();
 		caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
 		
@@ -156,18 +156,16 @@ public class Interface {
 		JList<String> list = new JList<String>();
 		list.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent arg0) {			
-				String selected = list.getSelectedValue();
-					System.out.println(selected);			
+				String selected = list.getSelectedValue();		
 					try {
 						ArrayList<Words> Words = getWordList();
 						for(Words word: Words) {
 							if(word.getWord().equals(selected)) {
-								doc.remove(0, doc.getLength());
-//								Style bigWord = textPane.addStyle()
+								rightWindow.remove(0, rightWindow.getLength());
 								Definitions[] definitions = word.getDefinitions();
 								int definitionCounter = 1;
 								for (Definitions definition : definitions) {
-									doc.insertString(doc.getLength(), definitionCounter + "." + selected +" (" + definition.getPartOfSpeech() +")\n\n    "  +  definition.getDefinition() + "\n\n", null);
+									rightWindow.insertString(rightWindow.getLength(), definitionCounter + "." + selected +" (" + definition.getPartOfSpeech() +")\n\n    "  +  definition.getDefinition() + "\n\n", null);
 									definitionCounter++;
 								}
 								
