@@ -128,7 +128,8 @@ public class Interface {
 		JList<String> list = new JList<String>();
 		list.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent arg0) {
-				System.out.println(list.getSelectedValue());
+				String selectedWord = list.getSelectedValue();
+				System.out.println(selectedWord);
 			}
 		});
 		scrollPane_1.setViewportView(list);
