@@ -32,6 +32,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.awt.Color;
+import java.awt.Font;
 
 public class Interface {
 
@@ -178,12 +179,14 @@ public class Interface {
 		list.setModel(DLM);
 		
 		JRadioButton ascendingButton = new JRadioButton("Ascending");
+		ascendingButton.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		buttonGroup.add(ascendingButton);
 		ascendingButton.setBounds(12, 78, 79, 23);
 		frmInterface.getContentPane().add(ascendingButton);
 		ascendingButton.setSelected(true);
 		
 		JRadioButton descendingButton = new JRadioButton("Descending");
+		descendingButton.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		buttonGroup.add(descendingButton);
 		descendingButton.setBounds(101, 78, 89, 23);
 		frmInterface.getContentPane().add(descendingButton);
