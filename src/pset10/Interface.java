@@ -137,20 +137,7 @@ public class Interface {
 		scrollPane.setBounds(490, 332, -57, -98);
 		frmInterface.getContentPane().add(scrollPane);
 		
-		txtSearch = new JTextField();
-		txtSearch.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyReleased(KeyEvent e) {
-				String input = txtSearch.getText().toLowerCase();
-				System.out.println(input);
-				DefaultListModel<String> words = new DefaultListModel<String>();
-		}
-		});
-		txtSearch.setToolTipText("");
-		txtSearch.setBounds(12, 45, 179, 20);
-		frmInterface.getContentPane().add(txtSearch);
-		txtSearch.setColumns(10);
-		
+
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setBounds(12, 114, 179, 446);
 		frmInterface.getContentPane().add(scrollPane_1);
@@ -185,18 +172,18 @@ public class Interface {
 		
 		list.setModel(DLM);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Asc");
-		buttonGroup.add(rdbtnNewRadioButton);
-		rdbtnNewRadioButton.setBounds(36, 78, 59, 23);
-		frmInterface.getContentPane().add(rdbtnNewRadioButton);
-		rdbtnNewRadioButton.setSelected(true);
+		JRadioButton ascendingButton = new JRadioButton("Asc");
+		buttonGroup.add(ascendingButton);
+		ascendingButton.setBounds(36, 78, 59, 23);
+		frmInterface.getContentPane().add(ascendingButton);
+		ascendingButton.setSelected(true);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Desc");
-		buttonGroup.add(rdbtnNewRadioButton_1);
-		rdbtnNewRadioButton_1.setBounds(110, 78, 59, 23);
-		frmInterface.getContentPane().add(rdbtnNewRadioButton_1);
+		JRadioButton descendingButton = new JRadioButton("Desc");
+		buttonGroup.add(descendingButton);
+		descendingButton.setBounds(110, 78, 59, 23);
+		frmInterface.getContentPane().add(descendingButton);
 		
-		rdbtnNewRadioButton_1.addItemListener(new ItemListener() {
+		descendingButton.addItemListener(new ItemListener() {
 
 		    @Override
 		    public void itemStateChanged(ItemEvent event) {
@@ -223,5 +210,36 @@ public class Interface {
 		    }
 
 		});
+		
+		txtSearch = new JTextField();
+		txtSearch.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+				String input = txtSearch.getText().toLowerCase();
+				System.out.println(input);
+				DefaultListModel<String> words = new DefaultListModel<String>();
+				if (!ascendingButton.isSelected()) {		        	
+				    try {
+				    	words = Utils.reverseOrder(getWords());
+					} catch (FileNotFoundException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+				    
+				} else {
+					try {
+						words = getWords();
+					} catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}	
+		}
+		}
+			});
+		txtSearch.setToolTipText("");
+		txtSearch.setBounds(12, 45, 179, 20);
+		frmInterface.getContentPane().add(txtSearch);
+		txtSearch.setColumns(10);
+		
 	}
 }
