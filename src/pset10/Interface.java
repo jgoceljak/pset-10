@@ -20,6 +20,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import javax.swing.event.ListSelectionListener;
+import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultCaret;
 import javax.swing.text.Style;
 import javax.swing.text.StyledDocument;
@@ -154,24 +155,30 @@ public class Interface {
 		
 		JList<String> list = new JList<String>();
 		list.addListSelectionListener(new ListSelectionListener() {
-			public void valueChanged(ListSelectionEvent arg0) {
-				String selectedWord = list.getSelectedValue();
-				System.out.println(selectedWord);
-				ArrayList<Words> Words = getWordList();
-				for(Words word: Words) {
-					if(word.getWord().equals(selectedWord)) {
-						doc.remove(0, doc.getLength());
-						Style bigWord = textPane.addStyle();
-						Definitions[] definitions = word.getDefinitions();
-						int definitionCounter = 1;
-						for (Definitions definition : definitions) {
-							doc.insertString(doc.getLength(), definitionCounter + "." + selectedWord +" (" + definition.getPartOfSpeech() +")\n\n    "  +  definition.getDefinition() + "\n\n", null);
-							definitionCounter++;
+			public void valueChanged(ListSelectionEvent arg0) {			
+				String selected = list.getSelectedValue();
+					System.out.println(selected);			
+					try {
+						ArrayList<Words> Words = getWordList();
+						for(Words word: Words) {
+							if(word.getWord().equals(selected)) {
+								doc.remove(0, doc.getLength());
+//								Style bigWord = textPane.addStyle()
+								Definitions[] definitions = word.getDefinitions();
+								int definitionCounter = 1;
+								for (Definitions definition : definitions) {
+									doc.insertString(doc.getLength(), definitionCounter + "." + selected +" (" + definition.getPartOfSpeech() +")\n\n    "  +  definition.getDefinition() + "\n\n", null);
+									definitionCounter++;
+								}
+								
+							}
+						}
+					} catch (FileNotFoundException | BadLocationException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}									
 			}
-		}
-				} 
-				} 
-			});
+		});
 		scrollPane_1.setViewportView(list);
 		
 		DefaultListModel<String> DLM =  getWords();
