@@ -175,6 +175,18 @@ public class Interface {
 									definitionCounter++;
 								}
 								
+								String[] synonyms = word.getSynonyms();
+				                if(synonyms.length != 0) {
+				                	rightWindow.insertString(rightWindow.getLength(),"Synonyms\n" ,header );
+				                	rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+				                  int synonymCounter = 1;
+				                  for(String synonym : synonyms) {
+
+				                	  rightWindow.insertString(rightWindow.getLength(), synonymCounter + "." + synonym + "\n", null);
+				                    synonymCounter++;
+				                  }
+				                }
+								
 								
 							}
 						}
