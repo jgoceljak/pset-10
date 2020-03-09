@@ -179,11 +179,21 @@ public class Interface {
 				                if(synonyms.length != 0) {
 				                	rightWindow.insertString(rightWindow.getLength(),"Synonyms\n" ,header );
 				                	rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
-				                  int synonymCounter = 1;
+				                  int scount = 1;
 				                  for(String synonym : synonyms) {
-
-				                	  rightWindow.insertString(rightWindow.getLength(), synonymCounter + "." + synonym + "\n", null);
-				                    synonymCounter++;
+				                	  rightWindow.insertString(rightWindow.getLength(), scount + "." + synonym + "\n", null);
+				                    scount++;
+				                  }
+				                }
+				                String[] antonyms = word.getAntonyms();
+				                if (antonyms.length != 0) {
+				                	rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+				                	rightWindow.insertString(rightWindow.getLength(),"Antonyms\n" ,header );
+				                	rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+				                  int acount = 1;
+				                  for(String antonym : antonyms) {
+				                	  rightWindow.insertString(rightWindow.getLength(), acount +"."+ antonym + "\n", null);
+				                    acount++;
 				                  }
 				                }
 								
