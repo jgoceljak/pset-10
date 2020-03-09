@@ -32,6 +32,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.List;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -129,16 +130,6 @@ public class Interface {
 		btnNewButton.setBounds(2, 11, 89, 23);
 		frmInterface.getContentPane().add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Remove");
-		btnNewButton_1.setForeground(Color.BLACK);
-		btnNewButton_1.setBackground(new Color(220, 20, 60));
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("Remove");
-			}
-		});
-		btnNewButton_1.setBounds(101, 11, 89, 23);
-		frmInterface.getContentPane().add(btnNewButton_1);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(490, 332, -57, -98);
@@ -211,6 +202,21 @@ public class Interface {
 		DefaultListModel<String> DLM =  getWords();
 		
 		list.setModel(DLM);
+		
+		JButton btnNewButton_1 = new JButton("Remove");
+		btnNewButton_1.setBackground(Color.RED);
+		btnNewButton_1.setForeground(Color.BLACK);
+	    btnNewButton_1.addActionListener(new ActionListener() {
+	      public void actionPerformed(ActionEvent arg0) {
+			List<String> selectedWords = list.getSelectedValuesList();    	  
+	        for(String word : selectedWords) {
+	        	System.out.println(word);
+	        }
+	      }
+	    });
+	    
+		btnNewButton_1.setBounds(101, 11, 89, 23);
+		frmInterface.getContentPane().add(btnNewButton_1);
 		
 		JRadioButton ascendingButton = new JRadioButton("Ascending");
 		ascendingButton.setFont(new Font("Tahoma", Font.PLAIN, 9));
