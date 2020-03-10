@@ -291,7 +291,6 @@ public class Interface {
 					        }
 					 }
 					for (Words removeWord : remove) {
-						System.out.println(removeWord);
 						newWords.remove(removeWord);
 						
 					}
@@ -299,7 +298,6 @@ public class Interface {
 			        String classpathDirectory = Utils.getClasspathDir();
 			         try (FileWriter writer = new FileWriter(classpathDirectory +"words.json")) {
 			                  gson.toJson(newWords, writer);
-			                  System.out.println("word removed");
 			              } catch (IOException e) {
 			                  e.printStackTrace( );
 			              }
