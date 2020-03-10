@@ -315,6 +315,24 @@ public class Interface {
 							e1.printStackTrace();
 						}
 				} list.setModel(words);
+				try {
+					rightWindow.remove(0, rightWindow.getLength());
+					rightWindow.insertString(rightWindow.getLength(),"Example Word\n" ,bigWord );
+					rightWindow.insertString(rightWindow.getLength(),"\n" , null );
+					rightWindow.insertString(rightWindow.getLength(),"Definitions\n" ,header );
+					rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+					rightWindow.insertString(rightWindow.getLength(),"1. Example Word (pos) \n\n    Definition of example word\n\n" ,null );
+					rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+					rightWindow.insertString(rightWindow.getLength(),"Synonyms\n" ,header );
+					rightWindow.insertString(rightWindow.getLength(),"\n1.Synonym " ,null );
+					rightWindow.insertString(rightWindow.getLength(),"\n\n" ,null );
+					rightWindow.insertString(rightWindow.getLength(),"Antonyms\n" ,header );
+					rightWindow.insertString(rightWindow.getLength(),"\n1.Antonym " ,null );
+				} catch (BadLocationException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
 				}catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
