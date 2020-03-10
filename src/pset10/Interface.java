@@ -12,6 +12,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.JRadioButton;
+import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
@@ -31,6 +32,8 @@ import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.Color;
@@ -117,7 +120,33 @@ public class Interface {
 		DefaultCaret caret = (DefaultCaret) textPane.getCaret();
 		caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
 		
-		
+		textPane.setBorder(BorderFactory.createCompoundBorder(
+		        textPane.getBorder(),
+		            BorderFactory.createEmptyBorder(10, 10 ,10 , 10)));
+		    Style bigWord = textPane.addStyle("Style", null);
+		    Style header = textPane.addStyle("Style", null);
+		    StyleConstants.setFontSize(header, 20);
+		    StyleConstants.setFontSize(bigWord, 36);
+		    StyleConstants.setBold(bigWord, true);
+
+		    try {
+				rightWindow.insertString(rightWindow.getLength(),"Example Word\n" ,bigWord );
+				rightWindow.insertString(rightWindow.getLength(),"\n" , null );
+			    rightWindow.insertString(rightWindow.getLength(),"Definitions\n" ,header );
+			    rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+			    rightWindow.insertString(rightWindow.getLength(),"1. Example Word (pos) \n\n    Definition of example word\n\n" ,null );
+			    rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
+			    rightWindow.insertString(rightWindow.getLength(),"Synonyms\n" ,header );
+			    rightWindow.insertString(rightWindow.getLength(),"\n1.Synonym " ,null );
+			    rightWindow.insertString(rightWindow.getLength(),"\n\n" ,null );
+			    rightWindow.insertString(rightWindow.getLength(),"Antonyms\n" ,header );
+			    rightWindow.insertString(rightWindow.getLength(),"\n1.Antonym " ,null );
+			
+			} catch (BadLocationException e3) {
+				// TODO Auto-generated catch block
+				e3.printStackTrace();
+			}
+		    
 		
 		JButton btnNewButton = new JButton("Add");
 		btnNewButton.setBackground(new Color(107, 142, 35));
@@ -203,20 +232,8 @@ public class Interface {
 		
 		list.setModel(DLM);
 		
-		JButton btnNewButton_1 = new JButton("Remove");
-		btnNewButton_1.setBackground(Color.RED);
-		btnNewButton_1.setForeground(Color.BLACK);
-	    btnNewButton_1.addActionListener(new ActionListener() {
-	      public void actionPerformed(ActionEvent arg0) {
-			List<String> selectedWords = list.getSelectedValuesList();    	  
-	        for(String word : selectedWords) {
-	        	System.out.println(word);
-	        }
-	      }
-	    });
+		
 	    
-		btnNewButton_1.setBounds(101, 11, 89, 23);
-		frmInterface.getContentPane().add(btnNewButton_1);
 		
 		JRadioButton ascendingButton = new JRadioButton("Ascending");
 		ascendingButton.setFont(new Font("Tahoma", Font.PLAIN, 9));
@@ -254,6 +271,61 @@ public class Interface {
 		    }
 
 		});
+		
+		JButton btnNewButton_1 = new JButton("Remove");
+		btnNewButton_1.setBackground(Color.RED);
+		btnNewButton_1.setForeground(Color.BLACK);
+	    btnNewButton_1.addActionListener(new ActionListener() {
+	      public void actionPerformed(ActionEvent arg0) {
+	    	  List<String> selected = list.getSelectedValuesList();
+				try {
+					ArrayList<Words> newWords = getWordList();
+					ArrayList<Words> remove = new ArrayList<Words>();
+					//add words to remove to list
+					 for(String i : selected) {
+					        for (Words word : newWords) {
+					        	if(i.equals(word.getWord())) { 
+					                  remove.add(word);
+
+					}
+					        }
+					 }
+					for (Words removeWord : remove) {
+						System.out.println(removeWord);
+						newWords.remove(removeWord);
+						
+					}
+					Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			        String classpathDirectory = Utils.getClasspathDir();
+			         try (FileWriter writer = new FileWriter(classpathDirectory +"words.json")) {
+			                  gson.toJson(newWords, writer);
+			                  System.out.println("word removed");
+			              } catch (IOException e) {
+			                  e.printStackTrace( );
+			              }
+			 		DefaultListModel<String> words = new DefaultListModel<String>();
+					if (!ascendingButton.isSelected()) {		        	
+					    try {
+					    	words = Utils.reverseOrder(getWords());
+						} catch (FileNotFoundException e2) {
+							e2.printStackTrace();
+						}		    
+					} else {
+						try {
+							words = getWords();
+						} catch (FileNotFoundException e1) {
+							e1.printStackTrace();
+						}
+				} list.setModel(words);
+				}catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		    	
+		      }
+	    });
+		btnNewButton_1.setBounds(101, 11, 89, 23);
+		frmInterface.getContentPane().add(btnNewButton_1);
 		
 		txtSearch = new JTextField();
 		txtSearch.addKeyListener(new KeyAdapter() {
