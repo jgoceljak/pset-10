@@ -166,7 +166,7 @@ public class Interface {
 	    
 	    JLabel lblPartOfSpech = new JLabel("Parts of Speech");
 	    lblPartOfSpech.setFont(new Font("Tahoma", Font.BOLD, 18));
-	    lblPartOfSpech.setBounds(336, 130, 157, 20);
+	    lblPartOfSpech.setBounds(344, 124, 184, 32);
 	    panel_1.add(lblPartOfSpech);
 	    
 	    JLabel label = new JLabel("Seperate using commas");
@@ -177,18 +177,18 @@ public class Interface {
 	    textField_2 = new JTextField();
 	    textField_2.setToolTipText("Part of Speech");
 	    textField_2.setColumns(10);
-	    textField_2.setBounds(346, 182, 147, 20);
+	    textField_2.setBounds(346, 182, 182, 20);
 	    panel_1.add(textField_2);
 	    
 	    JLabel lblSynonyms = new JLabel("Synonyms");
 	    lblSynonyms.setFont(new Font("Tahoma", Font.BOLD, 32));
-	    lblSynonyms.setBounds(10, 213, 184, 54);
+	    lblSynonyms.setBounds(10, 212, 184, 54);
 	    panel_1.add(lblSynonyms);
 	    
 	    textField_1 = new JTextField();
 	    textField_1.setToolTipText("synonym");
 	    textField_1.setColumns(10);
-	    textField_1.setBounds(20, 287, 286, 20);
+	    textField_1.setBounds(20, 287, 342, 20);
 	    panel_1.add(textField_1);
 	    
 	    JLabel label_1 = new JLabel("Seperate using commas");
@@ -209,7 +209,7 @@ public class Interface {
 	    textField_3 = new JTextField();
 	    textField_3.setToolTipText("antonyms");
 	    textField_3.setColumns(10);
-	    textField_3.setBounds(20, 400, 286, 20);
+	    textField_3.setBounds(20, 400, 342, 20);
 	    panel_1.add(textField_3);
 	    
 	    JScrollPane scrollPane_2 = new JScrollPane();
