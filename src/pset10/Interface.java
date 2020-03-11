@@ -491,7 +491,6 @@ public class Interface {
 		btnNewButton.addActionListener(new ActionListener() {
 //	      add
 	      public void actionPerformed(ActionEvent e) {
-	    	  System.out.println("add");
 	          cardLayout.show(panel, "addWord"); 
 	      }
 	    });
@@ -502,11 +501,11 @@ public class Interface {
 	    	public void actionPerformed(ActionEvent e) {
 	    	  String word = textField.getText().toLowerCase();
 	      	  String definitionInput = txtDefinitions.getText().toLowerCase();
-	      	  String posInput = textField_2.getText().toLowerCase();
-	      	  String synonymInput = textField_1.getText().toLowerCase();
-	      	  String antonymsInput = textField_3.getText().toLowerCase();
+	      	  String speechInput = textField_2.getText().toLowerCase();
+	      	  String synInput = textField_1.getText().toLowerCase();
+	      	  String antInput = textField_3.getText().toLowerCase();
 	      	  
-	      	  if(!word.equals("") || !definitionInput.equals("")|| !posInput.equals("")) {
+	      	  if(!word.equals("") || !definitionInput.equals("")|| !speechInput.equals("")) {
 	      		System.out.println(word);
 	      		 ArrayList<Words> wordList = new ArrayList<Words>();
 	         	  try {
@@ -516,21 +515,20 @@ public class Interface {
 	     			e1.printStackTrace();
 	         	  }
 	         	  String[] definitions = definitionInput.split("\\s*,\\s*");
-	         	  String[] poss = posInput.split("\\s*,\\s*");
-	         	  String[] synonyms = synonymInput.split("\\s*,\\s*");
-	         	  String[] antonyms = antonymsInput.split("\\s*,\\s*");
+	         	  String[] poss = speechInput.split("\\s*,\\s*");
+	         	  String[] synonyms = synInput.split("\\s*,\\s*");
+	         	  String[] antonyms = antInput.split("\\s*,\\s*");
 	         	  System.out.println(synonyms.length);
 	         	  
 	         	  if(definitions.length == poss.length) {
-	         		  System.out.println("pass");
 	         		  Definitions[] deffs = new Definitions[definitions.length];
 	             	  for (int i = 0; i < definitions.length; i++) {
 	             		  deffs[i] = new Definitions(definitions[i],poss[i]);
 	             	  }
-	             	  if(synonymInput.equals("")) {
+	             	  if(synInput.equals("")) {
 	             		 synonyms = null;
 	             	  }
-	             	 if(antonymsInput.equals("")) {
+	             	 if(antInput.equals("")) {
 	             		antonyms = null;
 	             	  }
 	             	  Words wordToAdd = new Words(word, deffs, synonyms, antonyms);
@@ -539,7 +537,6 @@ public class Interface {
 	               String classpathDirectory = Utils.getClasspathDir();
 	                try (FileWriter writer = new FileWriter(classpathDirectory +"words.json")) {
 	                         gson.toJson(wordList, writer);
-	                         System.out.println("word added");
 	                     } catch (IOException e1) {
 	                         e1.printStackTrace( );
 	                     }
@@ -562,11 +559,9 @@ public class Interface {
 	   			 }
 	                list.setModel(DLM);
 	         	  }else {
-	         		  System.out.println("fail");
 	         		  JOptionPane.showMessageDialog(null, "Amount of definitions and parts of speech do not match!");
 	         	  }
 	      	  }else {
-	      		 System.out.println("fail");
 	    		  JOptionPane.showMessageDialog(null, "Required field was left empty!");
 	      	  }
 	      	  
