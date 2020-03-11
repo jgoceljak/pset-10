@@ -49,6 +49,10 @@ public class Interface {
 	private JTextField textField;
 
 	private JTextField txtSearch;
+	private JTextField txtDefinitions;
+	private JTextField textField_2;
+	private JTextField textField_1;
+	private JTextField textField_3;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
@@ -146,6 +150,12 @@ public class Interface {
 	    lblDefinitions.setFont(new Font("Tahoma", Font.BOLD, 32));
 	    lblDefinitions.setBounds(10, 107, 199, 54);
 	    panel_1.add(lblDefinitions);
+	    
+	    txtDefinitions = new JTextField();
+	    txtDefinitions.setToolTipText("Definitions");
+	    txtDefinitions.setColumns(10);
+	    txtDefinitions.setBounds(20, 182, 286, 20);
+	    panel_1.add(txtDefinitions);
 	    
 	    JScrollPane scrollPane_2 = new JScrollPane();
 	    panel.add(scrollPane_2, "defintions");
