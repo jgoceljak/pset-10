@@ -254,50 +254,8 @@ public class Interface {
 			}
 		    
 		
-		JButton btnNewButton = new JButton("Add");
-		btnNewButton.setBackground(new Color(107, 142, 35));
-		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.addActionListener(new ActionListener() {
-	      public void actionPerformed(ActionEvent e) {
-	          String word = textField.getText().toLowerCase();
-	      	  String definitionInput = txtDefinitions.getText().toLowerCase();
-	      	  String speechInput = textField_2.getText().toLowerCase();
-	      	  String synInput = textField_1.getText().toLowerCase();
-	      	  String antInput = textField_3.getText().toLowerCase();
-	      	  
-	      	 if(!word.equals("") || !definitionInput.equals("")|| !speechInput.equals("")) {
-	       		System.out.println(word);
-	       		 ArrayList<Words> wordList = new ArrayList<Words>();
-	          	  try {
-	      			wordList = getWordList();
-	          	  } catch (FileNotFoundException e1) {
-	      			e1.printStackTrace();
-	          	  }
-	          	  String[] definitions = definitionInput.split("\\s*,\\s*");
-	          	  String[] poss = speechInput.split("\\s*,\\s*");
-	          	  String[] synonyms = synInput.split("\\s*,\\s*");
-	          	  String[] antonyms = antInput.split("\\s*,\\s*");
-	          	  
-	          	 if(definitions.length == poss.length) {
-	         		  System.out.println("pass");
-	         		  Definitions[] deffs = new Definitions[definitions.length];
-	         		 for (int i = 0; i < definitions.length; i++) {
-	             		  deffs[i] = new Definitions(definitions[i],poss[i]);
-	             	  }
-	             	  if(synInput.equals("")) {
-	             		 synonyms = null;
-	             	  }
-	             	 if(antInput.equals("")) {
-	             		antonyms = null;
-	             	  }
-	      }
-	      	 }
-	      }
-	    });
-	    btnNewButton.setBounds(2, 11, 89, 23);
-	    frmInterface.getContentPane().add(btnNewButton);
-		btnNewButton.setBounds(2, 11, 89, 23);
-		frmInterface.getContentPane().add(btnNewButton);
+	
+
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -490,6 +448,8 @@ public class Interface {
 		btnNewButton_1.setBounds(101, 11, 89, 23);
 		frmInterface.getContentPane().add(btnNewButton_1);
 		
+		
+		
 		txtSearch = new JTextField();
 		txtSearch.addKeyListener(new KeyAdapter() {
 			@Override
@@ -524,6 +484,101 @@ public class Interface {
 		txtSearch.setBounds(12, 45, 179, 20);
 		frmInterface.getContentPane().add(txtSearch);
 		txtSearch.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Add");
+		btnNewButton.setBackground(new Color(107, 142, 35));
+		btnNewButton.setForeground(Color.BLACK);
+		btnNewButton.addActionListener(new ActionListener() {
+//	      add
+	      public void actionPerformed(ActionEvent e) {
+	    	  System.out.println("add");
+	          cardLayout.show(panel, "addWord"); 
+	      }
+	    });
+	    btnNewButton.setBounds(2, 11, 89, 23);
+	    frmInterface.getContentPane().add(btnNewButton);
+
+	    btnNewButton_2.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent e) {
+	    	  String word = textField.getText().toLowerCase();
+	      	  String definitionInput = txtDefinitions.getText().toLowerCase();
+	      	  String posInput = textField_2.getText().toLowerCase();
+	      	  String synonymInput = textField_1.getText().toLowerCase();
+	      	  String antonymsInput = textField_3.getText().toLowerCase();
+	      	  
+	      	  if(!word.equals("") || !definitionInput.equals("")|| !posInput.equals("")) {
+	      		System.out.println(word);
+	      		 ArrayList<Words> wordList = new ArrayList<Words>();
+	         	  try {
+	     			wordList = getWordList();
+	         	  } catch (FileNotFoundException e1) {
+	     			// TODO Auto-generated catch block
+	     			e1.printStackTrace();
+	         	  }
+	         	  String[] definitions = definitionInput.split("\\s*,\\s*");
+	         	  String[] poss = posInput.split("\\s*,\\s*");
+	         	  String[] synonyms = synonymInput.split("\\s*,\\s*");
+	         	  String[] antonyms = antonymsInput.split("\\s*,\\s*");
+	         	  System.out.println(synonyms.length);
+	         	  
+	         	  if(definitions.length == poss.length) {
+	         		  System.out.println("pass");
+	         		  Definitions[] deffs = new Definitions[definitions.length];
+	             	  for (int i = 0; i < definitions.length; i++) {
+	             		  deffs[i] = new Definitions(definitions[i],poss[i]);
+	             	  }
+	             	  if(synonymInput.equals("")) {
+	             		 synonyms = null;
+	             	  }
+	             	 if(antonymsInput.equals("")) {
+	             		antonyms = null;
+	             	  }
+	             	  Words wordToAdd = new Words(word, deffs, synonyms, antonyms);
+	             	  wordList.add(wordToAdd);
+	             	Gson gson = new GsonBuilder().setPrettyPrinting().create();
+	               String classpathDirectory = Utils.getClasspathDir();
+	                try (FileWriter writer = new FileWriter(classpathDirectory +"words.json")) {
+	                         gson.toJson(wordList, writer);
+	                         System.out.println("word added");
+	                     } catch (IOException e1) {
+	                         e1.printStackTrace( );
+	                     }
+	                DefaultListModel<String> DLM = null;
+	                if (!ascendingButton.isSelected()) {
+	   			     try {
+	   			     	DLM = Utils.reverseOrder(getWords());
+	   			   } catch (FileNotFoundException e2) {
+	   			     // TODO Auto-generated catch block
+	   			     e2.printStackTrace();
+	   			   }
+
+	   			 } else {
+	   			   try {
+	   			 	  DLM = getWords();
+	   			   } catch (FileNotFoundException e1) {
+	   			     // TODO Auto-generated catch block
+	   			     e1.printStackTrace();
+	   			   }
+	   			 }
+	                list.setModel(DLM);
+	         	  }else {
+	         		  System.out.println("fail");
+	         		  JOptionPane.showMessageDialog(null, "Amount of definitions and parts of speech do not match!");
+	         	  }
+	      	  }else {
+	      		 System.out.println("fail");
+	    		  JOptionPane.showMessageDialog(null, "Required field was left empty!");
+	      	  }
+	      	  
+	      	 
+	    		cardLayout.show(panel, "defintions");
+	    	}
+	    });
+		
+	    btnNewButton.setBounds(2, 11, 89, 23);
+	    frmInterface.getContentPane().add(btnNewButton);
+		btnNewButton.setBounds(2, 11, 89, 23);
+		frmInterface.getContentPane().add(btnNewButton);
 		
 	}
 }
