@@ -147,13 +147,13 @@ public class Interface {
 	    panel_1.add(btnNewButton_2);
 	    
 	    JLabel lblDefinitions = new JLabel("Definitions");
-	    lblDefinitions.setFont(new Font("Tahoma", Font.BOLD, 32));
+	    lblDefinitions.setFont(new Font("Arial", Font.BOLD, 32));
 	    lblDefinitions.setBounds(10, 107, 199, 54);
 	    panel_1.add(lblDefinitions);
 	    
 	    
 	    JLabel lblSeperateByComma = new JLabel("Seperate using commas");
-	    lblSeperateByComma.setFont(new Font("Tahoma", Font.PLAIN, 12));
+	    lblSeperateByComma.setFont(new Font("Arial", Font.PLAIN, 12));
 	    lblSeperateByComma.setBounds(20, 264, 137, 20);
 	    panel_1.add(lblSeperateByComma);
 	    
@@ -165,12 +165,12 @@ public class Interface {
 	    
 	    
 	    JLabel lblPartOfSpech = new JLabel("Parts of Speech");
-	    lblPartOfSpech.setFont(new Font("Tahoma", Font.BOLD, 18));
+	    lblPartOfSpech.setFont(new Font("Arial", Font.BOLD, 18));
 	    lblPartOfSpech.setBounds(344, 124, 184, 32);
 	    panel_1.add(lblPartOfSpech);
 	    
 	    JLabel label = new JLabel("Seperate using commas");
-	    label.setFont(new Font("Tahoma", Font.PLAIN, 12));
+	    label.setFont(new Font("Arial", Font.PLAIN, 12));
 	    label.setBounds(20, 157, 137, 20);
 	    panel_1.add(label);
 	    
@@ -181,7 +181,7 @@ public class Interface {
 	    panel_1.add(textField_2);
 	    
 	    JLabel lblSynonyms = new JLabel("Synonyms");
-	    lblSynonyms.setFont(new Font("Tahoma", Font.BOLD, 32));
+	    lblSynonyms.setFont(new Font("Arial", Font.BOLD, 32));
 	    lblSynonyms.setBounds(10, 212, 184, 54);
 	    panel_1.add(lblSynonyms);
 	    
@@ -192,17 +192,17 @@ public class Interface {
 	    panel_1.add(textField_1);
 	    
 	    JLabel label_1 = new JLabel("Seperate using commas");
-	    label_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+	    label_1.setFont(new Font("Arial", Font.PLAIN, 12));
 	    label_1.setBounds(346, 161, 137, 20);
 	    panel_1.add(label_1);
 	    
 	    JLabel lblAntonyms = new JLabel("Antonyms");
-	    lblAntonyms.setFont(new Font("Tahoma", Font.BOLD, 32));
+	    lblAntonyms.setFont(new Font("Arial", Font.BOLD, 32));
 	    lblAntonyms.setBounds(10, 318, 184, 54);
 	    panel_1.add(lblAntonyms);
 	    
 	    JLabel label_2 = new JLabel("Seperate using commas");
-	    label_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+	    label_2.setFont(new Font("Arial", Font.PLAIN, 12));
 	    label_2.setBounds(20, 369, 137, 20);
 	    panel_1.add(label_2);
 	    
