@@ -113,7 +113,6 @@ public class Interface {
 		frmInterface.getContentPane().add(scrollPane_2);
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setText("1. Example (pos)");
 		textPane.setEditable(false);
 		scrollPane_2.setViewportView(textPane);
 		StyledDocument rightWindow = textPane.getStyledDocument();
