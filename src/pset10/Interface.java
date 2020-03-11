@@ -16,6 +16,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -275,6 +276,7 @@ public class Interface {
 		btnNewButton_1.setForeground(Color.BLACK);
 	    btnNewButton_1.addActionListener(new ActionListener() {
 	      public void actionPerformed(ActionEvent arg0) {
+	    	  boolean confirmed =  false;
 	    	  List<String> selected = list.getSelectedValuesList();
 				try {
 					ArrayList<Words> newWords = getWordList();
@@ -287,8 +289,16 @@ public class Interface {
 					}
 					        }
 					 }
+					 
+					 int dialogResult = JOptionPane.showConfirmDialog (null, "Are you sure you want to delete the following word(s)\nfrom the dictionary?\n\nThis action cannot be undone.\n\n","Warning",JOptionPane.YES_NO_OPTION);
+			    	  if(dialogResult == JOptionPane.YES_OPTION){
+			    		  confirmed = true;
+			    	  }
+			    	  
+			    	  if(confirmed) {
 					for (Words removeWord : remove) {
 						newWords.remove(removeWord);
+					}
 						
 					}
 					Gson gson = new GsonBuilder().setPrettyPrinting().create();

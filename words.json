@@ -133,35 +133,6 @@
     "antonyms": []
   },
   {
-    "word": "acquisition",
-    "definitions": [
-      {
-        "definition": "an ability that has been acquired by training",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "the cognitive process of acquiring skill or knowledge",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "something acquired",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "the act of contracting or assuming or acquiring possession of something",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "accomplishment",
-      "acquirement",
-      "attainment",
-      "skill",
-      "learning"
-    ],
-    "antonyms": []
-  },
-  {
     "word": "reproduce",
     "definitions": [
       {
@@ -860,23 +831,6 @@
     ]
   },
   {
-    "word": "archive",
-    "definitions": [
-      {
-        "definition": "put into an archive",
-        "partOfSpeech": "verb"
-      },
-      {
-        "definition": "a depository containing historical records and documents",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "file away"
-    ],
-    "antonyms": []
-  },
-  {
     "word": "station",
     "definitions": [
       {
@@ -990,33 +944,6 @@
       "graze",
       "browse",
       "range"
-    ],
-    "antonyms": []
-  },
-  {
-    "word": "allocation",
-    "definitions": [
-      {
-        "definition": "(computer science) the assignment of particular areas of a magnetic disk to particular data or instructions",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a share set aside for a specific purpose",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "the act of distributing by allotting or apportioning; distribution according to a plan",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "storage allocation",
-      "allotment",
-      "apportioning",
-      "apportionment",
-      "assignation",
-      "parceling",
-      "parcelling"
     ],
     "antonyms": []
   },
@@ -1907,23 +1834,6 @@
     "antonyms": []
   },
   {
-    "word": "anxiety",
-    "definitions": [
-      {
-        "definition": "(psychiatry) a relatively permanent state of worry and nervousness occurring in a variety of mental disorders, usually accompanied by compulsive behavior or attacks of panic",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a vague unpleasant emotion that is experienced in anticipation of some (usually ill-defined) misfortune",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "anxiousness"
-    ],
-    "antonyms": []
-  },
-  {
     "word": "exhibition",
     "definitions": [
       {
@@ -1981,47 +1891,6 @@
     ],
     "antonyms": [
       "success"
-    ]
-  },
-  {
-    "word": "affinity",
-    "definitions": [
-      {
-        "definition": "the force attracting atoms to each other and binding them together in a molecule",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a close connection marked by community of interests or similarity in nature or character",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "(biology) state of relationship between organisms or groups of organisms resulting in resemblance in structure or structural parts",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a natural attraction or feeling of kinship",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "(anthropology) kinship by marriage or adoption; not a blood relationship",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "(immunology) the attraction between an antigen and an antibody",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "inherent resemblance between persons or things",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "chemical attraction",
-      "kinship",
-      "phylogenetic relation"
-    ],
-    "antonyms": [
-      "consanguinity"
     ]
   },
   {
