@@ -133,9 +133,19 @@ public class Interface {
 	    panel_1.add(lblNewLabel);
 	    
 	    textField = new JTextField();
+	    textField.setToolTipText("Word");
 	    textField.setBounds(20, 76, 286, 20);
 	    panel_1.add(textField);
 	    textField.setColumns(10);
+	    
+	    JButton btnNewButton_2 = new JButton("Add");
+	    btnNewButton_2.setBounds(465, 513, 89, 23);
+	    panel_1.add(btnNewButton_2);
+	    
+	    JLabel lblDefinitions = new JLabel("Definitions");
+	    lblDefinitions.setFont(new Font("Tahoma", Font.BOLD, 32));
+	    lblDefinitions.setBounds(10, 107, 199, 54);
+	    panel_1.add(lblDefinitions);
 	    
 	    JScrollPane scrollPane_2 = new JScrollPane();
 	    panel.add(scrollPane_2, "defintions");
