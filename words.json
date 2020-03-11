@@ -66,14 +66,8 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "congratulations",
-      "extolment",
-      "kudos"
-    ],
-    "antonyms": [
-      "criticize"
-    ]
+    "synonyms": ["congratulations", "extolment", "kudos"],
+    "antonyms": ["criticize"]
   },
   {
     "word": "preference",
@@ -112,10 +106,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "newsman",
-      "newsperson"
-    ],
+    "synonyms": ["newsman", "newsperson"],
     "antonyms": []
   },
   {
@@ -126,9 +117,35 @@
         "partOfSpeech": "noun"
       }
     ],
+    "synonyms": ["sales rep", "sales representative"],
+    "antonyms": []
+  },
+  {
+    "word": "acquisition",
+    "definitions": [
+      {
+        "definition": "an ability that has been acquired by training",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "the cognitive process of acquiring skill or knowledge",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "something acquired",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "the act of contracting or assuming or acquiring possession of something",
+        "partOfSpeech": "noun"
+      }
+    ],
     "synonyms": [
-      "sales rep",
-      "sales representative"
+      "accomplishment",
+      "acquirement",
+      "attainment",
+      "skill",
+      "learning"
     ],
     "antonyms": []
   },
@@ -152,11 +169,7 @@
         "partOfSpeech": "verb"
       }
     ],
-    "synonyms": [
-      "regurgitate",
-      "multiply",
-      "procreate"
-    ],
+    "synonyms": ["regurgitate", "multiply", "procreate"],
     "antonyms": []
   },
   {
@@ -211,14 +224,8 @@
         "partOfSpeech": "adjective"
       }
     ],
-    "synonyms": [
-      "self-generated",
-      "ad-lib",
-      "unwritten"
-    ],
-    "antonyms": [
-      "induced"
-    ]
+    "synonyms": ["self-generated", "ad-lib", "unwritten"],
+    "antonyms": ["induced"]
   },
   {
     "word": "resort",
@@ -270,9 +277,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "finding of fact"
-    ],
+    "synonyms": ["finding of fact"],
     "antonyms": []
   },
   {
@@ -295,10 +300,7 @@
         "partOfSpeech": "verb"
       }
     ],
-    "synonyms": [
-      "do",
-      "execute"
-    ],
+    "synonyms": ["do", "execute"],
     "antonyms": []
   },
   {
@@ -348,7 +350,7 @@
         "partOfSpeech": "noun"
       },
       {
-        "definition": "having an orbit farther from the sun than the Earth\u0027s orbit",
+        "definition": "having an orbit farther from the sun than the Earth's orbit",
         "partOfSpeech": "adjective"
       },
       {
@@ -360,11 +362,11 @@
         "partOfSpeech": "adjective"
       },
       {
-        "definition": "(often followed by `to\u0027) above being affected or influenced by",
+        "definition": "(often followed by `to') above being affected or influenced by",
         "partOfSpeech": "adjective"
       },
       {
-        "definition": "(sometimes followed by `to\u0027) not subject to or influenced by",
+        "definition": "(sometimes followed by `to') not subject to or influenced by",
         "partOfSpeech": "adjective"
       },
       {
@@ -382,9 +384,7 @@
       "superordinate",
       "lake superior"
     ],
-    "antonyms": [
-      "inferior"
-    ]
+    "antonyms": ["inferior"]
   },
   {
     "word": "password",
@@ -394,12 +394,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "countersign",
-      "parole",
-      "watchword",
-      "word"
-    ],
+    "synonyms": ["countersign", "parole", "watchword", "word"],
     "antonyms": []
   },
   {
@@ -418,11 +413,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "passport",
-      "good word",
-      "testimonial"
-    ],
+    "synonyms": ["passport", "good word", "testimonial"],
     "antonyms": []
   },
   {
@@ -453,7 +444,7 @@
         "partOfSpeech": "adjective"
       },
       {
-        "definition": "a board measure \u003d 1980 board feet",
+        "definition": "a board measure = 1980 board feet",
         "partOfSpeech": "noun"
       },
       {
@@ -482,9 +473,7 @@
       "monetary standard",
       "stock"
     ],
-    "antonyms": [
-      "nonstandard"
-    ]
+    "antonyms": ["nonstandard"]
   },
   {
     "word": "association",
@@ -522,16 +511,8 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "affiliation",
-      "tie",
-      "tie-up",
-      "connection",
-      "connexion"
-    ],
-    "antonyms": [
-      "disassociation"
-    ]
+    "synonyms": ["affiliation", "tie", "tie-up", "connection", "connexion"],
+    "antonyms": ["disassociation"]
   },
   {
     "word": "stream",
@@ -637,9 +618,7 @@
       "defy",
       "deny"
     ],
-    "antonyms": [
-      "accept"
-    ]
+    "antonyms": ["accept"]
   },
   {
     "word": "sulphur",
@@ -653,11 +632,7 @@
         "partOfSpeech": "verb"
       }
     ],
-    "synonyms": [
-      "atomic number 16",
-      "s",
-      "sulfur"
-    ],
+    "synonyms": ["atomic number 16", "s", "sulfur"],
     "antonyms": []
   },
   {
@@ -759,9 +734,7 @@
       "warm",
       "hard"
     ],
-    "antonyms": [
-      "weak"
-    ]
+    "antonyms": ["weak"]
   },
   {
     "word": "ghostwriter",
@@ -771,9 +744,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "ghost"
-    ],
+    "synonyms": ["ghost"],
     "antonyms": []
   },
   {
@@ -784,12 +755,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "bag",
-      "grip",
-      "traveling bag",
-      "travelling bag"
-    ],
+    "synonyms": ["bag", "grip", "traveling bag", "travelling bag"],
     "antonyms": []
   },
   {
@@ -826,9 +792,22 @@
       "attractive feature",
       "magnet"
     ],
-    "antonyms": [
-      "repulsion"
-    ]
+    "antonyms": ["repulsion"]
+  },
+  {
+    "word": "archive",
+    "definitions": [
+      {
+        "definition": "put into an archive",
+        "partOfSpeech": "verb"
+      },
+      {
+        "definition": "a depository containing historical records and documents",
+        "partOfSpeech": "noun"
+      }
+    ],
+    "synonyms": ["file away"],
+    "antonyms": []
   },
   {
     "word": "station",
@@ -858,12 +837,37 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "place",
-      "post",
-      "send"
-    ],
+    "synonyms": ["place", "post", "send"],
     "antonyms": []
+  },
+  {
+    "word": "approval",
+    "definitions": [
+      {
+        "definition": "the formal act of approving",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "acceptance as satisfactory",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a message expressing a favorable opinion",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a feeling of liking something or someone good",
+        "partOfSpeech": "noun"
+      }
+    ],
+    "synonyms": [
+      "approving",
+      "blessing",
+      "favorable reception",
+      "favourable reception",
+      "commendation"
+    ],
+    "antonyms": ["disapproval"]
   },
   {
     "word": "limited",
@@ -901,15 +905,8 @@
         "partOfSpeech": "adjective"
       }
     ],
-    "synonyms": [
-      "circumscribed",
-      "modified",
-      "special",
-      "express"
-    ],
-    "antonyms": [
-      "unlimited"
-    ]
+    "synonyms": ["circumscribed", "modified", "special", "express"],
+    "antonyms": ["unlimited"]
   },
   {
     "word": "pasture",
@@ -944,6 +941,33 @@
       "graze",
       "browse",
       "range"
+    ],
+    "antonyms": []
+  },
+  {
+    "word": "allocation",
+    "definitions": [
+      {
+        "definition": "(computer science) the assignment of particular areas of a magnetic disk to particular data or instructions",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a share set aside for a specific purpose",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "the act of distributing by allotting or apportioning; distribution according to a plan",
+        "partOfSpeech": "noun"
+      }
+    ],
+    "synonyms": [
+      "storage allocation",
+      "allotment",
+      "apportioning",
+      "apportionment",
+      "assignation",
+      "parceling",
+      "parcelling"
     ],
     "antonyms": []
   },
@@ -991,7 +1015,7 @@
     "word": "football",
     "definitions": [
       {
-        "definition": "any of various games played with a ball (round or oval) in which two teams try to kick or carry or propel the ball into each other\u0027s goal",
+        "definition": "any of various games played with a ball (round or oval) in which two teams try to kick or carry or propel the ball into each other's goal",
         "partOfSpeech": "noun"
       },
       {
@@ -999,9 +1023,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "football game"
-    ],
+    "synonyms": ["football game"],
     "antonyms": []
   },
   {
@@ -1087,7 +1109,7 @@
         "partOfSpeech": "noun"
       },
       {
-        "definition": "a person\u0027s social heritage: previous experience or training",
+        "definition": "a person's social heritage: previous experience or training",
         "partOfSpeech": "noun"
       },
       {
@@ -1108,9 +1130,31 @@
       "background knowledge",
       "background signal"
     ],
-    "antonyms": [
-      "foreground"
-    ]
+    "antonyms": ["foreground"]
+  },
+  {
+    "word": "captivate",
+    "definitions": [
+      {
+        "definition": "attract; cause to be enamored",
+        "partOfSpeech": "verb"
+      }
+    ],
+    "synonyms": [
+      "becharm",
+      "beguile",
+      "bewitch",
+      "capture",
+      "catch",
+      "charm",
+      "enamor",
+      "enamour",
+      "enchant",
+      "entrance",
+      "fascinate",
+      "trance"
+    ],
+    "antonyms": []
   },
   {
     "word": "revolutionary",
@@ -1128,10 +1172,12 @@
         "partOfSpeech": "adjective"
       },
       {
-        "definition": "advocating or engaged in revolution"
+        "definition": "advocating or engaged in revolution",
+        "partOfSpeech": null
       },
       {
-        "definition": "relating to or having the nature of a revolution"
+        "definition": "relating to or having the nature of a revolution",
+        "partOfSpeech": null
       }
     ],
     "synonyms": [
@@ -1141,9 +1187,7 @@
       "radical",
       "rotatory"
     ],
-    "antonyms": [
-      "counterrevolutionary"
-    ]
+    "antonyms": ["counterrevolutionary"]
   },
   {
     "word": "recycle",
@@ -1157,10 +1201,7 @@
         "partOfSpeech": "verb"
       }
     ],
-    "synonyms": [
-      "reprocess",
-      "reuse"
-    ],
+    "synonyms": ["reprocess", "reuse"],
     "antonyms": []
   },
   {
@@ -1195,17 +1236,8 @@
         "partOfSpeech": "adjective"
       }
     ],
-    "synonyms": [
-      "ticklish",
-      "touchy",
-      "fragile",
-      "frail",
-      "soft",
-      "finespun"
-    ],
-    "antonyms": [
-      "rugged"
-    ]
+    "synonyms": ["ticklish", "touchy", "fragile", "frail", "soft", "finespun"],
+    "antonyms": ["rugged"]
   },
   {
     "word": "government",
@@ -1286,6 +1318,41 @@
     "antonyms": []
   },
   {
+    "word": "critical",
+    "definitions": [
+      {
+        "definition": "forming or having the nature of a turning point or crisis",
+        "partOfSpeech": "adjective"
+      },
+      {
+        "definition": "urgently needed; absolutely necessary",
+        "partOfSpeech": "adjective"
+      },
+      {
+        "definition": "at or of a point at which a property or phenomenon suffers an abrupt change especially having enough mass to sustain a chain reaction",
+        "partOfSpeech": "adjective"
+      },
+      {
+        "definition": "being in or verging on a state of crisis or emergency",
+        "partOfSpeech": "adjective"
+      },
+      {
+        "definition": "characterized by careful evaluation and judgment",
+        "partOfSpeech": "adjective"
+      },
+      {
+        "definition": "marked by a tendency to find and call attention to errors and flaws",
+        "partOfSpeech": "adjective"
+      },
+      {
+        "definition": "of or involving or characteristic of critics or criticism",
+        "partOfSpeech": null
+      }
+    ],
+    "synonyms": ["decisive", "vital"],
+    "antonyms": ["noncritical", "uncritical"]
+  },
+  {
     "word": "length",
     "definitions": [
       {
@@ -1309,10 +1376,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "duration",
-      "distance"
-    ],
+    "synonyms": ["duration", "distance"],
     "antonyms": []
   },
   {
@@ -1374,6 +1438,49 @@
       "span",
       "bridge circuit",
       "bridge over"
+    ],
+    "antonyms": []
+  },
+  {
+    "word": "constitution",
+    "definitions": [
+      {
+        "definition": "law determining the fundamental political principles of a government",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "the act of forming or establishing something",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "the way in which someone or something is composed",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "the constitution written at the Constitutional Convention in Philadelphia in 1787 and subsequently ratified by the original thirteen states",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a United States 44-gun frigate that was one of the first three naval ships built by the United States; it won brilliant victories over British frigates during the War of 1812 and is without doubt the most famous ship in the history of the United States Navy; it has been rebuilt and is anchored in the Charlestown Navy Yard in Boston",
+        "partOfSpeech": "noun"
+      }
+    ],
+    "synonyms": [
+      "fundamental law",
+      "organic law",
+      "establishment",
+      "formation",
+      "organisation",
+      "organization",
+      "composition",
+      "make-up",
+      "makeup",
+      "physical composition",
+      "constitution of the united states",
+      "u.s. constitution",
+      "united states constitution",
+      "us constitution",
+      "old ironsides"
     ],
     "antonyms": []
   },
@@ -1557,9 +1664,22 @@
       "show",
       "launch"
     ],
-    "antonyms": [
-      "abolish"
-    ]
+    "antonyms": ["abolish"]
+  },
+  {
+    "word": "census",
+    "definitions": [
+      {
+        "definition": "a periodic count of the population",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "conduct a census",
+        "partOfSpeech": "verb"
+      }
+    ],
+    "synonyms": ["nose count", "nosecount"],
+    "antonyms": []
   },
   {
     "word": "epicalyx",
@@ -1569,11 +1689,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "calycle",
-      "calyculus",
-      "false calyx"
-    ],
+    "synonyms": ["calycle", "calyculus", "false calyx"],
     "antonyms": []
   },
   {
@@ -1667,9 +1783,7 @@
       "chemical compound",
       "colonial"
     ],
-    "antonyms": [
-      "simple"
-    ]
+    "antonyms": ["simple"]
   },
   {
     "word": "elegant",
@@ -1687,25 +1801,33 @@
         "partOfSpeech": "adjective"
       }
     ],
-    "synonyms": [
-      "graceful",
-      "refined"
-    ],
-    "antonyms": [
-      "inelegant"
-    ]
+    "synonyms": ["graceful", "refined"],
+    "antonyms": ["inelegant"]
   },
   {
     "word": "eavesdrop",
     "definitions": [
       {
-        "definition": "listen without the speaker\u0027s knowledge",
+        "definition": "listen without the speaker's knowledge",
         "partOfSpeech": "verb"
       }
     ],
-    "synonyms": [
-      "listen in"
+    "synonyms": ["listen in"],
+    "antonyms": []
+  },
+  {
+    "word": "anxiety",
+    "definitions": [
+      {
+        "definition": "(psychiatry) a relatively permanent state of worry and nervousness occurring in a variety of mental disorders, usually accompanied by compulsive behavior or attacks of panic",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a vague unpleasant emotion that is experienced in anticipation of some (usually ill-defined) misfortune",
+        "partOfSpeech": "noun"
+      }
     ],
+    "synonyms": ["anxiousness"],
     "antonyms": []
   },
   {
@@ -1720,10 +1842,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "expo",
-      "exposition"
-    ],
+    "synonyms": ["expo", "exposition"],
     "antonyms": []
   },
   {
@@ -1758,15 +1877,43 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "loser",
-      "nonstarter",
-      "unsuccessful person",
-      "bankruptcy"
+    "synonyms": ["loser", "nonstarter", "unsuccessful person", "bankruptcy"],
+    "antonyms": ["success"]
+  },
+  {
+    "word": "affinity",
+    "definitions": [
+      {
+        "definition": "the force attracting atoms to each other and binding them together in a molecule",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a close connection marked by community of interests or similarity in nature or character",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "(biology) state of relationship between organisms or groups of organisms resulting in resemblance in structure or structural parts",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a natural attraction or feeling of kinship",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "(anthropology) kinship by marriage or adoption; not a blood relationship",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "(immunology) the attraction between an antigen and an antibody",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "inherent resemblance between persons or things",
+        "partOfSpeech": "noun"
+      }
     ],
-    "antonyms": [
-      "success"
-    ]
+    "synonyms": ["chemical attraction", "kinship", "phylogenetic relation"],
+    "antonyms": ["consanguinity"]
   },
   {
     "word": "secure",
@@ -1839,9 +1986,7 @@
       "unafraid",
       "untroubled"
     ],
-    "antonyms": [
-      "insecure"
-    ]
+    "antonyms": ["insecure"]
   },
   {
     "word": "thought",
@@ -1897,15 +2042,68 @@
         "partOfSpeech": "adjective"
       }
     ],
-    "synonyms": [
-      "fat",
-      "fertile",
-      "rich",
-      "generative"
+    "synonyms": ["fat", "fertile", "rich", "generative"],
+    "antonyms": ["unproductive"]
+  },
+  {
+    "word": "crusade",
+    "definitions": [
+      {
+        "definition": "exert oneself continuously, vigorously, or obtrusively to gain an end or engage in a crusade for a certain cause or person; be an advocate for",
+        "partOfSpeech": "verb"
+      },
+      {
+        "definition": "a series of actions advancing a principle or tending toward a particular end",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "any of the more or less continuous military expeditions in the 11th to 13th centuries when Christian powers of Europe tried to recapture the Holy Land from the Muslims",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "go on a crusade; fight a holy war",
+        "partOfSpeech": "verb"
+      }
     ],
-    "antonyms": [
-      "unproductive"
-    ]
+    "synonyms": [
+      "agitate",
+      "campaign",
+      "fight",
+      "press",
+      "push",
+      "cause",
+      "drive",
+      "effort",
+      "movement"
+    ],
+    "antonyms": []
+  },
+  {
+    "word": "chapter",
+    "definitions": [
+      {
+        "definition": "a local branch of some fraternity or association",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "an ecclesiastical assembly of the monks in a monastery or even of the canons of a church",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "any distinct period in history or in a person's life",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a series of related events forming an episode",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a subdivision of a written work; usually numbered and titled",
+        "partOfSpeech": "noun"
+      }
+    ],
+    "synonyms": [],
+    "antonyms": []
   },
   {
     "word": "relinquish",
@@ -1919,7 +2117,7 @@
         "partOfSpeech": "verb"
       },
       {
-        "definition": "release, as from one\u0027s grip",
+        "definition": "release, as from one's grip",
         "partOfSpeech": "verb"
       },
       {
@@ -1941,6 +2139,64 @@
       "let go of",
       "quit",
       "renounce"
+    ],
+    "antonyms": []
+  },
+  {
+    "word": "champion",
+    "definitions": [
+      {
+        "definition": "someone who has won first place in a competition",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "holding first place in a contest",
+        "partOfSpeech": "adjective"
+      },
+      {
+        "definition": "someone who is dazzlingly skilled in any field",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a person who backs a politician or a team etc.",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "protect or fight for as a champion",
+        "partOfSpeech": "verb"
+      },
+      {
+        "definition": "someone who fights for a cause",
+        "partOfSpeech": "noun"
+      }
+    ],
+    "synonyms": [
+      "champ",
+      "title-holder",
+      "prizewinning",
+      "ace",
+      "adept",
+      "genius",
+      "hotshot",
+      "maven",
+      "mavin",
+      "sensation",
+      "star",
+      "superstar",
+      "virtuoso",
+      "whizz",
+      "whiz",
+      "wiz",
+      "wizard",
+      "admirer",
+      "booster",
+      "friend",
+      "protagonist",
+      "supporter",
+      "defend",
+      "fighter",
+      "hero",
+      "paladin"
     ],
     "antonyms": []
   },
@@ -2063,10 +2319,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "dental practitioner",
-      "tooth doctor"
-    ],
+    "synonyms": ["dental practitioner", "tooth doctor"],
     "antonyms": []
   },
   {
@@ -2077,10 +2330,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "cognition",
-      "noesis"
-    ],
+    "synonyms": ["cognition", "noesis"],
     "antonyms": []
   },
   {
@@ -2095,11 +2345,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "producer",
-      "maker",
-      "manufacturing business"
-    ],
+    "synonyms": ["producer", "maker", "manufacturing business"],
     "antonyms": []
   },
   {
@@ -2122,11 +2368,7 @@
         "partOfSpeech": "verb"
       }
     ],
-    "synonyms": [
-      "license",
-      "permit",
-      "certify"
-    ],
+    "synonyms": ["license", "permit", "certify"],
     "antonyms": []
   },
   {
@@ -2217,12 +2459,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "aim",
-      "objective",
-      "target",
-      "physical object"
-    ],
+    "synonyms": ["aim", "objective", "target", "physical object"],
     "antonyms": []
   },
   {
@@ -2269,15 +2506,13 @@
       "fuss",
       "overprotect"
     ],
-    "antonyms": [
-      "father"
-    ]
+    "antonyms": ["father"]
   },
   {
     "word": "gravity",
     "definitions": [
       {
-        "definition": "(physics) the force of attraction between all masses in the universe; especially the attraction of the earth\u0027s mass for bodies near its surface",
+        "definition": "(physics) the force of attraction between all masses in the universe; especially the attraction of the earth's mass for bodies near its surface",
         "partOfSpeech": "noun"
       },
       {
@@ -2300,9 +2535,7 @@
       "somberness",
       "sombreness"
     ],
-    "antonyms": [
-      "levity"
-    ]
+    "antonyms": ["levity"]
   },
   {
     "word": "material",
@@ -2361,15 +2594,13 @@
       "corporeal",
       "stuff"
     ],
-    "antonyms": [
-      "immaterial"
-    ]
+    "antonyms": ["immaterial"]
   },
   {
     "word": "jealous",
     "definitions": [
       {
-        "definition": "showing extreme cupidity; painfully desirous of another\u0027s advantages",
+        "definition": "showing extreme cupidity; painfully desirous of another's advantages",
         "partOfSpeech": "adjective"
       },
       {
@@ -2377,12 +2608,7 @@
         "partOfSpeech": "adjective"
       }
     ],
-    "synonyms": [
-      "covetous",
-      "envious",
-      "green-eyed",
-      "overjealous"
-    ],
+    "synonyms": ["covetous", "envious", "green-eyed", "overjealous"],
     "antonyms": []
   },
   {
@@ -2501,14 +2727,11 @@
         "partOfSpeech": "adjective"
       },
       {
-        "definition": "belonging or appropriate to the office of a judge"
+        "definition": "belonging or appropriate to the office of a judge",
+        "partOfSpeech": null
       }
     ],
-    "synonyms": [
-      "juridic",
-      "juridical",
-      "discriminative"
-    ],
+    "synonyms": ["juridic", "juridical", "discriminative"],
     "antonyms": []
   },
   {
@@ -2668,7 +2891,8 @@
         "partOfSpeech": "adjective"
       },
       {
-        "definition": "of or relating to the sea"
+        "definition": "of or relating to the sea",
+        "partOfSpeech": null
       }
     ],
     "synonyms": [
@@ -2730,6 +2954,28 @@
       "burp",
       "eruct",
       "house of cards"
+    ],
+    "antonyms": []
+  },
+  {
+    "word": "cinema",
+    "definitions": [
+      {
+        "definition": "a theater where films are shown",
+        "partOfSpeech": "noun"
+      },
+      {
+        "definition": "a medium that disseminates moving pictures",
+        "partOfSpeech": "noun"
+      }
+    ],
+    "synonyms": [
+      "movie house",
+      "movie theater",
+      "movie theatre",
+      "picture palace",
+      "celluloid",
+      "film"
     ],
     "antonyms": []
   },
@@ -2810,9 +3056,7 @@
       "get",
       "take"
     ],
-    "antonyms": [
-      "expand"
-    ]
+    "antonyms": ["expand"]
   },
   {
     "word": "dimension",
@@ -2842,11 +3086,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "attribute",
-      "property",
-      "proportion"
-    ],
+    "synonyms": ["attribute", "property", "proportion"],
     "antonyms": []
   },
   {
@@ -2891,7 +3131,7 @@
         "partOfSpeech": "noun"
       },
       {
-        "definition": "a woman\u0027s undergarment worn to give shape to the contours of the body",
+        "definition": "a woman's undergarment worn to give shape to the contours of the body",
         "partOfSpeech": "noun"
       },
       {
@@ -3004,10 +3244,7 @@
         "partOfSpeech": "noun"
       }
     ],
-    "synonyms": [
-      "league",
-      "group discussion"
-    ],
+    "synonyms": ["league", "group discussion"],
     "antonyms": []
   },
   {
