@@ -180,7 +180,6 @@ public class Interface {
 								Style bigWord = textPane.addStyle("Style", null);
 								Style header = textPane.addStyle("Style", null);
 								StyleConstants.setFontSize(header, 20);
-//								StyleConstants.setBold(header, true);
 								StyleConstants.setFontSize(bigWord, 36);
 								StyleConstants.setBold(bigWord, true);
 								rightWindow.insertString(rightWindow.getLength(),selected.substring(0, 1).toUpperCase() + selected.substring(1) + "\n" ,bigWord );
@@ -280,7 +279,6 @@ public class Interface {
 				try {
 					ArrayList<Words> newWords = getWordList();
 					ArrayList<Words> remove = new ArrayList<Words>();
-					//add words to remove to list
 					 for(String i : selected) {
 					        for (Words word : newWords) {
 					        	if(i.equals(word.getWord())) { 
