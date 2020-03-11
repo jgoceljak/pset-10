@@ -264,6 +264,21 @@ public class Interface {
 	      	  String speechInput = textField_2.getText().toLowerCase();
 	      	  String synInput = textField_1.getText().toLowerCase();
 	      	  String antInput = textField_3.getText().toLowerCase();
+	      	  
+	      	 if(!word.equals("") || !definitionInput.equals("")|| !speechInput.equals("")) {
+	       		System.out.println(word);
+	       		 ArrayList<Words> wordList = new ArrayList<Words>();
+	          	  try {
+	      			wordList = getWordList();
+	          	  } catch (FileNotFoundException e1) {
+	      			// TODO Auto-generated catch block
+	      			e1.printStackTrace();
+	          	  }
+	          	  String[] definitions = definitionInput.split("\\s*,\\s*");
+	          	  String[] poss = speechInput.split("\\s*,\\s*");
+	          	  String[] synonyms = synInput.split("\\s*,\\s*");
+	          	  String[] antonyms = antInput.split("\\s*,\\s*");
+	      }
 	      }
 	    });
 	    btnNewButton.setBounds(2, 11, 89, 23);
