@@ -271,14 +271,27 @@ public class Interface {
 	          	  try {
 	      			wordList = getWordList();
 	          	  } catch (FileNotFoundException e1) {
-	      			// TODO Auto-generated catch block
 	      			e1.printStackTrace();
 	          	  }
 	          	  String[] definitions = definitionInput.split("\\s*,\\s*");
 	          	  String[] poss = speechInput.split("\\s*,\\s*");
 	          	  String[] synonyms = synInput.split("\\s*,\\s*");
 	          	  String[] antonyms = antInput.split("\\s*,\\s*");
+	          	  
+	          	 if(definitions.length == poss.length) {
+	         		  System.out.println("pass");
+	         		  Definitions[] deffs = new Definitions[definitions.length];
+	         		 for (int i = 0; i < definitions.length; i++) {
+	             		  deffs[i] = new Definitions(definitions[i],poss[i]);
+	             	  }
+	             	  if(synInput.equals("")) {
+	             		 synonyms = null;
+	             	  }
+	             	 if(antInput.equals("")) {
+	             		antonyms = null;
+	             	  }
 	      }
+	      	 }
 	      }
 	    });
 	    btnNewButton.setBounds(2, 11, 89, 23);
