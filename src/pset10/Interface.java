@@ -253,11 +253,6 @@ public class Interface {
 				e3.printStackTrace();
 			}
 		    
-		
-	
-
-		
-		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(490, 332, -57, -98);
 		frmInterface.getContentPane().add(scrollPane);
@@ -383,21 +378,17 @@ public class Interface {
 					        for (Words word : newWords) {
 					        	if(i.equals(word.getWord())) { 
 					                  remove.add(word);
-
 					}
 					        }
-					 }
-					 
+					 } 
 					 int dialogResult = JOptionPane.showConfirmDialog (null, "Are you sure you want to delete the following word(s)\nfrom the dictionary?\n\nThis action cannot be undone.\n\n","Warning",JOptionPane.YES_NO_OPTION);
 			    	  if(dialogResult == JOptionPane.YES_OPTION){
 			    		  confirmed = true;
-			    	  }
-			    	  
+			    	  }	    	  
 			    	  if(confirmed) {
 					for (Words removeWord : remove) {
 						newWords.remove(removeWord);
-					}
-						
+					}				
 					}
 					Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			        String classpathDirectory = Utils.getClasspathDir();
@@ -447,9 +438,7 @@ public class Interface {
 	    });
 		btnNewButton_1.setBounds(101, 11, 89, 23);
 		frmInterface.getContentPane().add(btnNewButton_1);
-		
-		
-		
+			
 		txtSearch = new JTextField();
 		txtSearch.addKeyListener(new KeyAdapter() {
 			@Override
@@ -489,7 +478,6 @@ public class Interface {
 		btnNewButton.setBackground(new Color(107, 142, 35));
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.addActionListener(new ActionListener() {
-//	      add
 	      public void actionPerformed(ActionEvent e) {
 	          cardLayout.show(panel, "addWord"); 
 	      }
