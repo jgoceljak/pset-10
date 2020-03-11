@@ -151,11 +151,28 @@ public class Interface {
 	    lblDefinitions.setBounds(10, 107, 199, 54);
 	    panel_1.add(lblDefinitions);
 	    
+	    
+	    JLabel lblSeperateByComma = new JLabel("Seperate using commas");
+	    lblSeperateByComma.setFont(new Font("Tahoma", Font.PLAIN, 12));
+	    lblSeperateByComma.setBounds(20, 264, 137, 20);
+	    panel_1.add(lblSeperateByComma);
+	    
 	    txtDefinitions = new JTextField();
 	    txtDefinitions.setToolTipText("Definitions");
 	    txtDefinitions.setColumns(10);
 	    txtDefinitions.setBounds(20, 182, 286, 20);
 	    panel_1.add(txtDefinitions);
+	    
+	    
+	    JLabel lblPartOfSpech = new JLabel("Parts of Speech");
+	    lblPartOfSpech.setFont(new Font("Tahoma", Font.BOLD, 18));
+	    lblPartOfSpech.setBounds(336, 130, 157, 20);
+	    panel_1.add(lblPartOfSpech);
+	    
+	    JLabel label = new JLabel("Seperate using commas");
+	    label.setFont(new Font("Tahoma", Font.PLAIN, 12));
+	    label.setBounds(20, 157, 137, 20);
+	    panel_1.add(label);
 	    
 	    textField_2 = new JTextField();
 	    textField_2.setToolTipText("Part of Speech");
@@ -163,10 +180,21 @@ public class Interface {
 	    textField_2.setBounds(346, 182, 147, 20);
 	    panel_1.add(textField_2);
 	    
-	    JLabel lblPartOfSpech = new JLabel("Parts of Speech");
-	    lblPartOfSpech.setFont(new Font("Tahoma", Font.BOLD, 18));
-	    lblPartOfSpech.setBounds(336, 130, 157, 20);
-	    panel_1.add(lblPartOfSpech);
+	    JLabel lblSynonyms = new JLabel("Synonyms");
+	    lblSynonyms.setFont(new Font("Tahoma", Font.BOLD, 32));
+	    lblSynonyms.setBounds(10, 213, 184, 54);
+	    panel_1.add(lblSynonyms);
+	    
+	    textField_1 = new JTextField();
+	    textField_1.setToolTipText("synonym");
+	    textField_1.setColumns(10);
+	    textField_1.setBounds(20, 287, 286, 20);
+	    panel_1.add(textField_1);
+	    
+	    JLabel label_1 = new JLabel("Seperate using commas");
+	    label_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+	    label_1.setBounds(346, 161, 137, 20);
+	    panel_1.add(label_1);
 	    
 	    JScrollPane scrollPane_2 = new JScrollPane();
 	    panel.add(scrollPane_2, "defintions");
