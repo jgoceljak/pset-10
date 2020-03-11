@@ -1,35 +1,15 @@
 package pset10;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
-import javax.swing.JRadioButton;
-import javax.swing.BorderFactory;
-import javax.swing.ButtonGroup;
-import javax.swing.DefaultListModel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import javax.swing.event.ListSelectionListener;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultCaret;
-import javax.swing.text.Style;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
-import javax.swing.event.ListSelectionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
@@ -39,9 +19,26 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Font;
+import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultCaret;
+import javax.swing.text.Style;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 
 public class Interface {
 
@@ -186,7 +183,7 @@ public class Interface {
 	    panel_1.add(lblSynonyms);
 	    
 	    textField_1 = new JTextField();
-	    textField_1.setToolTipText("synonym");
+	    textField_1.setToolTipText("Synonym");
 	    textField_1.setColumns(10);
 	    textField_1.setBounds(20, 287, 342, 20);
 	    panel_1.add(textField_1);
@@ -207,7 +204,7 @@ public class Interface {
 	    panel_1.add(label_2);
 	    
 	    textField_3 = new JTextField();
-	    textField_3.setToolTipText("antonyms");
+	    textField_3.setToolTipText("Antonyms");
 	    textField_3.setColumns(10);
 	    textField_3.setBounds(20, 400, 342, 20);
 	    panel_1.add(textField_3);

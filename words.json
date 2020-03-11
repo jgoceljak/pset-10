@@ -1113,30 +1113,6 @@
     ]
   },
   {
-    "word": "captivate",
-    "definitions": [
-      {
-        "definition": "attract; cause to be enamored",
-        "partOfSpeech": "verb"
-      }
-    ],
-    "synonyms": [
-      "becharm",
-      "beguile",
-      "bewitch",
-      "capture",
-      "catch",
-      "charm",
-      "enamor",
-      "enamour",
-      "enchant",
-      "entrance",
-      "fascinate",
-      "trance"
-    ],
-    "antonyms": []
-  },
-  {
     "word": "revolutionary",
     "definitions": [
       {
@@ -1310,46 +1286,6 @@
     "antonyms": []
   },
   {
-    "word": "critical",
-    "definitions": [
-      {
-        "definition": "forming or having the nature of a turning point or crisis",
-        "partOfSpeech": "adjective"
-      },
-      {
-        "definition": "urgently needed; absolutely necessary",
-        "partOfSpeech": "adjective"
-      },
-      {
-        "definition": "at or of a point at which a property or phenomenon suffers an abrupt change especially having enough mass to sustain a chain reaction",
-        "partOfSpeech": "adjective"
-      },
-      {
-        "definition": "being in or verging on a state of crisis or emergency",
-        "partOfSpeech": "adjective"
-      },
-      {
-        "definition": "characterized by careful evaluation and judgment",
-        "partOfSpeech": "adjective"
-      },
-      {
-        "definition": "marked by a tendency to find and call attention to errors and flaws",
-        "partOfSpeech": "adjective"
-      },
-      {
-        "definition": "of or involving or characteristic of critics or criticism"
-      }
-    ],
-    "synonyms": [
-      "decisive",
-      "vital"
-    ],
-    "antonyms": [
-      "noncritical",
-      "uncritical"
-    ]
-  },
-  {
     "word": "length",
     "definitions": [
       {
@@ -1438,49 +1374,6 @@
       "span",
       "bridge circuit",
       "bridge over"
-    ],
-    "antonyms": []
-  },
-  {
-    "word": "constitution",
-    "definitions": [
-      {
-        "definition": "law determining the fundamental political principles of a government",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "the act of forming or establishing something",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "the way in which someone or something is composed",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "the constitution written at the Constitutional Convention in Philadelphia in 1787 and subsequently ratified by the original thirteen states",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a United States 44-gun frigate that was one of the first three naval ships built by the United States; it won brilliant victories over British frigates during the War of 1812 and is without doubt the most famous ship in the history of the United States Navy; it has been rebuilt and is anchored in the Charlestown Navy Yard in Boston",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "fundamental law",
-      "organic law",
-      "establishment",
-      "formation",
-      "organisation",
-      "organization",
-      "composition",
-      "make-up",
-      "makeup",
-      "physical composition",
-      "constitution of the united states",
-      "u.s. constitution",
-      "united states constitution",
-      "us constitution",
-      "old ironsides"
     ],
     "antonyms": []
   },
@@ -1667,24 +1560,6 @@
     "antonyms": [
       "abolish"
     ]
-  },
-  {
-    "word": "census",
-    "definitions": [
-      {
-        "definition": "a periodic count of the population",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "conduct a census",
-        "partOfSpeech": "verb"
-      }
-    ],
-    "synonyms": [
-      "nose count",
-      "nosecount"
-    ],
-    "antonyms": []
   },
   {
     "word": "epicalyx",
@@ -2033,66 +1908,6 @@
     ]
   },
   {
-    "word": "crusade",
-    "definitions": [
-      {
-        "definition": "exert oneself continuously, vigorously, or obtrusively to gain an end or engage in a crusade for a certain cause or person; be an advocate for",
-        "partOfSpeech": "verb"
-      },
-      {
-        "definition": "a series of actions advancing a principle or tending toward a particular end",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "any of the more or less continuous military expeditions in the 11th to 13th centuries when Christian powers of Europe tried to recapture the Holy Land from the Muslims",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "go on a crusade; fight a holy war",
-        "partOfSpeech": "verb"
-      }
-    ],
-    "synonyms": [
-      "agitate",
-      "campaign",
-      "fight",
-      "press",
-      "push",
-      "cause",
-      "drive",
-      "effort",
-      "movement"
-    ],
-    "antonyms": []
-  },
-  {
-    "word": "chapter",
-    "definitions": [
-      {
-        "definition": "a local branch of some fraternity or association",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "an ecclesiastical assembly of the monks in a monastery or even of the canons of a church",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "any distinct period in history or in a person\u0027s life",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a series of related events forming an episode",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a subdivision of a written work; usually numbered and titled",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [],
-    "antonyms": []
-  },
-  {
     "word": "relinquish",
     "definitions": [
       {
@@ -2126,64 +1941,6 @@
       "let go of",
       "quit",
       "renounce"
-    ],
-    "antonyms": []
-  },
-  {
-    "word": "champion",
-    "definitions": [
-      {
-        "definition": "someone who has won first place in a competition",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "holding first place in a contest",
-        "partOfSpeech": "adjective"
-      },
-      {
-        "definition": "someone who is dazzlingly skilled in any field",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a person who backs a politician or a team etc.",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "protect or fight for as a champion",
-        "partOfSpeech": "verb"
-      },
-      {
-        "definition": "someone who fights for a cause",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "champ",
-      "title-holder",
-      "prizewinning",
-      "ace",
-      "adept",
-      "genius",
-      "hotshot",
-      "maven",
-      "mavin",
-      "sensation",
-      "star",
-      "superstar",
-      "virtuoso",
-      "whizz",
-      "whiz",
-      "wiz",
-      "wizard",
-      "admirer",
-      "booster",
-      "friend",
-      "protagonist",
-      "supporter",
-      "defend",
-      "fighter",
-      "hero",
-      "paladin"
     ],
     "antonyms": []
   },
@@ -2973,28 +2730,6 @@
       "burp",
       "eruct",
       "house of cards"
-    ],
-    "antonyms": []
-  },
-  {
-    "word": "cinema",
-    "definitions": [
-      {
-        "definition": "a theater where films are shown",
-        "partOfSpeech": "noun"
-      },
-      {
-        "definition": "a medium that disseminates moving pictures",
-        "partOfSpeech": "noun"
-      }
-    ],
-    "synonyms": [
-      "movie house",
-      "movie theater",
-      "movie theatre",
-      "picture palace",
-      "celluloid",
-      "film"
     ],
     "antonyms": []
   },
