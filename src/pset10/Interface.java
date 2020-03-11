@@ -259,8 +259,11 @@ public class Interface {
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.addActionListener(new ActionListener() {
 	      public void actionPerformed(ActionEvent e) {
-	        System.out.println("add");
-	        cardLayout.show(panel, "addWord");
+	          String word = textField.getText().toLowerCase();
+	      	  String definitionInput = txtDefinitions.getText().toLowerCase();
+	      	  String speechInput = textField_2.getText().toLowerCase();
+	      	  String synInput = textField_1.getText().toLowerCase();
+	      	  String antInput = textField_3.getText().toLowerCase();
 	      }
 	    });
 	    btnNewButton.setBounds(2, 11, 89, 23);
