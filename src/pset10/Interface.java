@@ -237,7 +237,7 @@ public class Interface {
 				rightWindow.insertString(rightWindow.getLength(),"\n" , null );
 			    rightWindow.insertString(rightWindow.getLength(),"Definitions\n" ,header );
 			    rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
-			    rightWindow.insertString(rightWindow.getLength(),"1. Example Word (pos) \n\n    Definition of example word\n\n" ,null );
+			    rightWindow.insertString(rightWindow.getLength(),"1. Example Word (Part of Speech) \n\n    Definition of example word\n\n" ,null );
 			    rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
 			    rightWindow.insertString(rightWindow.getLength(),"Synonyms\n" ,header );
 			    rightWindow.insertString(rightWindow.getLength(),"\n1.Synonym " ,null );
@@ -414,7 +414,7 @@ public class Interface {
 					rightWindow.insertString(rightWindow.getLength(),"\n" , null );
 					rightWindow.insertString(rightWindow.getLength(),"Definitions\n" ,header );
 					rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
-					rightWindow.insertString(rightWindow.getLength(),"1. Example Word (pos) \n\n    Definition of example word\n\n" ,null );
+					rightWindow.insertString(rightWindow.getLength(),"1. Example Word (Part of Speech) \n\n    Definition of example word\n\n" ,null );
 					rightWindow.insertString(rightWindow.getLength(),"\n" ,null );
 					rightWindow.insertString(rightWindow.getLength(),"Synonyms\n" ,header );
 					rightWindow.insertString(rightWindow.getLength(),"\n1.Synonym " ,null );
