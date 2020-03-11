@@ -3,6 +3,7 @@ package pset10;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -45,6 +46,8 @@ import java.awt.Font;
 public class Interface {
 
 	private JFrame frmInterface;
+	private JTextField textField;
+
 	private JTextField txtSearch;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
@@ -104,28 +107,45 @@ public class Interface {
 	 * @throws FileNotFoundException 
 	 */
 	private void initialize() throws FileNotFoundException {
-		frmInterface = new JFrame();
-		frmInterface.setResizable(false);
-		frmInterface.setTitle("Interface");
-		frmInterface.setBounds(100, 100, 800, 600);
-		frmInterface.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmInterface.getContentPane().setLayout(null);
-		
-		JScrollPane scrollPane_2 = new JScrollPane();
-		scrollPane_2.setBounds(207, 11, 566, 549);
-		frmInterface.getContentPane().add(scrollPane_2);
-		
+	    frmInterface = new JFrame();
+	    frmInterface.setResizable(false);
+	    frmInterface.setTitle("Dictionary");
+	    frmInterface.setBounds(100, 100, 800, 600);
+	    frmInterface.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frmInterface.getContentPane().setLayout(null);
+
 	    JPanel panel = new JPanel();
 	    panel.setBounds(207, 11, 566, 549);
 	    frmInterface.getContentPane().add(panel);
 	    panel.setLayout(new CardLayout(0, 0));
-		
-		CardLayout cardLayout = (CardLayout) panel.getLayout();
+	    
+	    JScrollPane scrollPane_3 = new JScrollPane();
+	    panel.add(scrollPane_3, "addWord");
+	    
+	    JPanel panel_1 = new JPanel();
+	    panel_1.setBackground(Color.WHITE);
+	    scrollPane_3.setViewportView(panel_1);
+	    panel_1.setLayout(null);
+	    
+	    JLabel lblNewLabel = new JLabel("Add Word");
+	    lblNewLabel.setFont(new Font("Arial", Font.BOLD, 32));
+	    lblNewLabel.setBounds(10, 11, 244, 54);
+	    panel_1.add(lblNewLabel);
+	    
+	    textField = new JTextField();
+	    textField.setBounds(20, 76, 286, 20);
+	    panel_1.add(textField);
+	    textField.setColumns(10);
+	    
+	    JScrollPane scrollPane_2 = new JScrollPane();
+	    panel.add(scrollPane_2, "defintions");
+	    
+	    CardLayout cardLayout = (CardLayout) panel.getLayout();
 	    cardLayout.show(panel, "defintions");
-		
-		JTextPane textPane = new JTextPane();
-		textPane.setEditable(false);
-		scrollPane_2.setViewportView(textPane);
+	    
+	    JTextPane textPane = new JTextPane();
+	    textPane.setEditable(false);
+	    scrollPane_2.setViewportView(textPane);
 		
 		StyledDocument rightWindow = textPane.getStyledDocument();
 		DefaultCaret caret = (DefaultCaret) textPane.getCaret();
@@ -163,10 +183,13 @@ public class Interface {
 		btnNewButton.setBackground(new Color(107, 142, 35));
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println("add");
-			}
-		});
+	      public void actionPerformed(ActionEvent e) {
+	        System.out.println("add");
+	        cardLayout.show(panel, "addWord");
+	      }
+	    });
+	    btnNewButton.setBounds(2, 11, 89, 23);
+	    frmInterface.getContentPane().add(btnNewButton);
 		btnNewButton.setBounds(2, 11, 89, 23);
 		frmInterface.getContentPane().add(btnNewButton);
 		
