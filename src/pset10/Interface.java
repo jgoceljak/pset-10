@@ -17,6 +17,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -37,6 +38,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -113,9 +115,18 @@ public class Interface {
 		scrollPane_2.setBounds(207, 11, 566, 549);
 		frmInterface.getContentPane().add(scrollPane_2);
 		
+	    JPanel panel = new JPanel();
+	    panel.setBounds(207, 11, 566, 549);
+	    frmInterface.getContentPane().add(panel);
+	    panel.setLayout(new CardLayout(0, 0));
+		
+		CardLayout cardLayout = (CardLayout) panel.getLayout();
+	    cardLayout.show(panel, "defintions");
+		
 		JTextPane textPane = new JTextPane();
 		textPane.setEditable(false);
 		scrollPane_2.setViewportView(textPane);
+		
 		StyledDocument rightWindow = textPane.getStyledDocument();
 		DefaultCaret caret = (DefaultCaret) textPane.getCaret();
 		caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
